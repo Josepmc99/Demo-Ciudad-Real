@@ -9,11 +9,8 @@ export async function generateStaticParams() {
 }
 
 // 🔑 Haz la función async y espera los params si es necesario
-export default async function ProjectPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function ProjectPage(props: any) {
+  const { params } = props;
   const project = ProjectList.find((p) => p.id.toString() === params.id);
 
   if (!project) {
