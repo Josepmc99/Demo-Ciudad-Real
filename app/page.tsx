@@ -61,6 +61,8 @@ export default function Home() {
                       src={marker.image}
                       alt={marker.name}
                       className="w-full h-full object-cover"
+                      width={300}
+                      height={300}
                     />
                   </div>
                 </div>

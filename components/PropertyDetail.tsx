@@ -17,8 +17,8 @@ interface Project {
   description: string;
   amenities: string[];
   features: string[];
-  image: StaticImageData;
-  additionalImages: StaticImageData[];
+  image: string;
+  additionalImages: string[];
   mapCoordinates: { latitude: number; longitude: number };
 }
 
