@@ -7,8 +7,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = ProjectList.find((p) => p.id.toString() === params.id);
+export default function ProjectPage({ params }: { params: { id: number } }) {
+  const project = ProjectList.find((p) => p.id === params.id);
 
   if (!project) {
     return <div>Proyecto no encontrado</div>;
