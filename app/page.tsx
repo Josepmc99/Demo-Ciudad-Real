@@ -2,24 +2,12 @@
 
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map, { Marker } from "react-map-gl/mapbox";
-import Header from "@/components/Header";
 import PropertiesDisplay from "@/components/PropertiesDisplay";
 import { useTheme } from "next-themes";
-import LightIcon from "@/public/home-light.svg";
-import DarkIcon from "@/public/home-dark.svg";
-import HoverIcon from "@/public/home-color.svg";
+import LightIcon from "@/public/marker-light.svg";
+import DarkIcon from "@/public/marker-dark.svg";
 import { useState } from "react";
-import Image from "next/image";
-
-
-const markers = [
-  { id: 1, latitude: 38.85, longitude: 0.06 },
-  { id: 2, latitude: 38.85, longitude: 0.09},
-  { id: 3, latitude: 38.84, longitude: 0.09},
-  { id: 4, latitude: 38.82, longitude: 0.13},
-  { id: 5, latitude: 38.82, longitude: 0.11},
-  { id: 6, latitude: 38.83, longitude: 0.06}
-];
+import ProjectList from "@/data/projects";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -33,43 +21,47 @@ export default function Home() {
 
   return (
     <div className="flex flex-col h-screen w-full">
-      <Header />
       <div className="flex h-full pt-2">
         <div className="flex-grow h-screen">
           <Map
             mapboxAccessToken={mapboxToken}
             initialViewState={{
-              longitude: 0.10,
-              latitude: 38.83,
+              longitude: -3.93,
+              latitude: 38.98,
               zoom: 13,
             }}
             mapStyle={
-              theme === "light" ? "mapbox://styles/mapbox/light-v10" : "mapbox://styles/mapbox/dark-v10"
+              theme === "light"
+                ? "mapbox://styles/mapbox/light-v10"
+                : "mapbox://styles/mapbox/dark-v10"
             }
           >
-            {markers.map((marker) => (
+            {ProjectList.map((marker) => (
               <Marker
                 key={marker.id}
                 longitude={marker.longitude}
                 latitude={marker.latitude}
                 anchor="bottom"
               >
-                {/* Eventos de hover */}
                 <div
                   onMouseEnter={() => setHoveredMarkerId(marker.id)}
                   onMouseLeave={() => setHoveredMarkerId(null)}
-                  style={{
-                    cursor: "pointer",
-                    width: "30px",
-                    height: "30px",
-                  }}
+                  className={`relative cursor-pointer w-15 h-15 transform transition-transform duration-200 
+      ${hoveredMarkerId === marker.id ? "scale-120" : "scale-100"}`}
                 >
-                  <Image
-                    src={hoveredMarkerId === marker.id ? HoverIcon : markerIcon}
-                    alt="Custom Marker"
-                    width={30}
-                    height={30}
-                  />
+                  {/* Círculo principal con imagen */}
+                  <div
+                    className={`rounded-full border-4 overflow-hidden w-full h-full
+        ${
+          hoveredMarkerId === marker.id ? "border-green-500" : "border-gray-500"
+        }`}
+                  >
+                    <img
+                      src={`/${marker.id}.jpg`}
+                      alt="Marker"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </Marker>
             ))}

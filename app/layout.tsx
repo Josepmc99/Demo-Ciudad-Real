@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HouserRenting",
-  description: "Creado por Josep",
+  title: "Mapa Ciudad Real",
+  description: "Creado por IMEDES",
 };
 
 export default function RootLayout({
@@ -33,7 +33,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        >{children}</ThemeProvider>
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
