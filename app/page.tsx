@@ -8,6 +8,7 @@ import LightIcon from "@/public/marker-light.svg";
 import DarkIcon from "@/public/marker-dark.svg";
 import { useState } from "react";
 import ProjectList from "@/data/projects";
+import Image from "next/image";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -56,9 +57,9 @@ export default function Home() {
           hoveredMarkerId === marker.id ? "border-green-500" : "border-gray-500"
         }`}
                   >
-                    <img
-                      src={`/${marker.id}.jpg`}
-                      alt="Marker"
+                    <Image
+                      src={marker.image}
+                      alt={marker.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
