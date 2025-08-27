@@ -1,17 +1,15 @@
 import ProjectList from "@/data/projects";
 import PropertyDetail from "@/components/PropertyDetail";
 
-type ProjectPageProps = {
-  params: {
-    id: string; // siempre string en rutas dinámicas
-  };
-};
-
 export async function generateStaticParams() {
   return ProjectList.map((p) => ({
-    id: p.id.toString(), // genera rutas estáticas como strings
+    id: p.id.toString(), // siempre string
   }));
 }
+
+type ProjectPageProps = {
+  params: { id: string }; // 👈 aquí el tipado correcto
+};
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const project = ProjectList.find((p) => p.id.toString() === params.id);
