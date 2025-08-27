@@ -1,17 +1,19 @@
+// app/[id]/page.tsx
 import ProjectList from "@/data/projects";
 import PropertyDetail from "@/components/PropertyDetail";
 
 export async function generateStaticParams() {
   return ProjectList.map((p) => ({
-    id: p.id.toString(), // siempre string
+    id: p.id.toString(),
   }));
 }
 
-type ProjectPageProps = {
-  params: { id: string }; // 👈 aquí el tipado correcto
-};
-
-export default function ProjectPage({ params }: ProjectPageProps) {
+// 🔑 Haz la función async y espera los params si es necesario
+export default async function ProjectPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const project = ProjectList.find((p) => p.id.toString() === params.id);
 
   if (!project) {
