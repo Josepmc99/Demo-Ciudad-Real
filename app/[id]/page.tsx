@@ -3,7 +3,7 @@ import PropertyDetail from "@/components/PropertyDetail";
 
 export async function generateStaticParams() {
   return ProjectList.map((p) => ({
-    id: p.id.toString(), // genera rutas estáticas /projects/1, /projects/2...
+    id: p.id, // genera rutas estáticas /projects/1, /projects/2...
   }));
 }
 
