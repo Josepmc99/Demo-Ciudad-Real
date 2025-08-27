@@ -37,12 +37,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/projects/1.jpg",
-    additionalImages: [
-      "/images/projects/1.jpg",
-      "/images/projects/2.jpg",
-      "/images/projects/3.jpg",
-    ],
+    image: "/images/1.jpg",
+    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -65,12 +61,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/projects/2.jpg",
-    additionalImages: [
-      "/images/projects/1.jpg",
-      "/images/projects/2.jpg",
-      "/images/projects/3.jpg",
-    ],
+    image: "/images/2.jpg",
+    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -93,12 +85,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/projects/3.jpg",
-    additionalImages: [
-      "/images/projects/1.jpg",
-      "/images/projects/2.jpg",
-      "/images/projects/3.jpg",
-    ],
+    image: "/images/3.jpg",
+    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -121,12 +109,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/projects/4.jpg",
-    additionalImages: [
-      "/images/projects/1.jpg",
-      "/images/projects/2.jpg",
-      "/images/projects/3.jpg",
-    ],
+    image: "/images/4.jpg",
+    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -149,12 +133,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/projects/5.jpg",
-    additionalImages: [
-      "/images/projects/1.jpg",
-      "/images/projects/2.jpg",
-      "/images/projects/3.jpg",
-    ],
+    image: "/images/5.jpg",
+    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
 ];
