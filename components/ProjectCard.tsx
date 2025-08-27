@@ -43,7 +43,7 @@ const ProjectCard = ({
     <Card className={`py-0 overflow-hidden ${highlighted ? " border-3" : ""}`}>
       <div className="relative w-full h-48">
         <Image
-          alt="house"
+          alt="Project"
           src={image}
           layout="fill"
           objectFit="cover"

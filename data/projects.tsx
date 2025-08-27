@@ -49,8 +49,12 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/1.jpg",
-    additionalImages: ["/2.jpg", "/3.jpg", "/4.jpg"],
+    image: "/images/projects/1.jpg",
+    additionalImages: [
+      "/images/projects/1.jpg",
+      "/images/projects/2.jpg",
+      "/images/projects/3.jpg",
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -73,8 +77,12 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/2.jpg",
-    additionalImages: ["/4.jpg", "/3.jpg", "/5.jpg"],
+    image: "/images/projects/2.jpg",
+    additionalImages: [
+      "/images/projects/1.jpg",
+      "/images/projects/2.jpg",
+      "/images/projects/3.jpg",
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -97,8 +105,12 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/3.jpg",
-    additionalImages: ["/2.jpg", "/5.jpg", "/4.jpg"],
+    image: "/images/projects/3.jpg",
+    additionalImages: [
+      "/images/projects/1.jpg",
+      "/images/projects/2.jpg",
+      "/images/projects/3.jpg",
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -121,8 +133,12 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/4.jpg",
-    additionalImages: ["/1.jpg", "/2.jpg", "/3.jpg"],
+    image: "/images/projects/4.jpg",
+    additionalImages: [
+      "/images/projects/1.jpg",
+      "/images/projects/2.jpg",
+      "/images/projects/3.jpg",
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -145,8 +161,12 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/5.jpg",
-    additionalImages: ["/1.jpg", "/2.jpg", "/3.jpg"],
+    image: "/images/projects/5.jpg",
+    additionalImages: [
+      "/images/projects/1.jpg",
+      "/images/projects/2.jpg",
+      "/images/projects/3.jpg",
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
 ];
