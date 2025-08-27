@@ -1,14 +1,14 @@
-//Imagen principal del proyecto
-import project1 from "../assets/1.jpg";
-import project2 from "../assets/2.jpg";
-import project3 from "../assets/3.jpg";
-import project4 from "../assets/4.jpg";
-import project5 from "../assets/5.jpg";
+// //Imagen principal del proyecto
+// import project1 from "../assets/1.jpg";
+// import project2 from "../assets/2.jpg";
+// import project3 from "../assets/3.jpg";
+// import project4 from "../assets/4.jpg";
+// import project5 from "../assets/5.jpg";
 
-//Imagen secundaria del proyecto
-import Interior1 from "../assets/2.jpg";
-import Interior2 from "../assets/3.jpg";
-import Interior3 from "../assets/4.jpg";
+// //Imagen secundaria del proyecto
+// import Interior1 from "../assets/2.jpg";
+// import Interior2 from "../assets/3.jpg";
+// import Interior3 from "../assets/4.jpg";
 
 const ProjectList = [
   {
@@ -31,8 +31,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: project1,
-    additionalImages: [Interior1, Interior2, Interior3],
+    image: "/1.jpg",
+    additionalImages: ["/2.jpg", "/3.jpg", "/4.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -55,8 +55,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: project2,
-    additionalImages: [Interior1, Interior2, Interior3],
+    image: "/2.jpg",
+    additionalImages: ["/4.jpg", "/3.jpg", "/5.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -79,8 +79,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: project3,
-    additionalImages: [Interior1, Interior2, Interior3],
+    image: "/3.jpg",
+    additionalImages: ["/2.jpg", "/5.jpg", "/4.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -103,8 +103,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: project4,
-    additionalImages: [Interior1, Interior2, Interior3],
+    image: "/4.jpg",
+    additionalImages: ["/1.jpg", "/2.jpg", "/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -127,8 +127,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: project5,
-    additionalImages: [Interior1, Interior2, Interior3],
+    image: "/5.jpg",
+    additionalImages: ["/1.jpg", "/2.jpg", "/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
 ];

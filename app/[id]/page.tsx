@@ -1,4 +1,4 @@
-import ProjectList from "@/src/data/projects";
+import ProjectList from "@/data/projects";
 import PropertyDetail from "@/components/PropertyDetail";
 
 export async function generateStaticParams() {
