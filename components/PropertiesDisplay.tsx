@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 import ProjectCard from "./ProjectCard";
-import ProjectList from "@/data/projects";
+import ProjectList from "@/src/data/projects";
 
 interface PropertiesDisplayProps {
   hoveredMarkerId: number | null;

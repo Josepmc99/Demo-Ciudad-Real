@@ -1,14 +1,14 @@
 //Imagen principal del proyecto
-import project1 from "../src/assets/1.jpg";
-import project2 from "../src/assets/2.jpg";
-import project3 from "../src/assets/3.jpg";
-import project4 from "../src/assets/4.jpg";
-import project5 from "../src/assets/5.jpg";
+import project1 from "../assets/1.jpg";
+import project2 from "../assets/2.jpg";
+import project3 from "../assets/3.jpg";
+import project4 from "../assets/4.jpg";
+import project5 from "../assets/5.jpg";
 
 //Imagen secundaria del proyecto
-import Interior1 from "../src/assets/2.jpg";
-import Interior2 from "../src/assets/3.jpg";
-import Interior3 from "../src/assets/4.jpg";
+import Interior1 from "../assets/2.jpg";
+import Interior2 from "../assets/3.jpg";
+import Interior3 from "../assets/4.jpg";
 
 const ProjectList = [
   {

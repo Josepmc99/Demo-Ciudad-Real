@@ -7,7 +7,7 @@ import { useTheme } from "next-themes";
 import LightIcon from "@/public/marker-light.svg";
 import DarkIcon from "@/public/marker-dark.svg";
 import { useState } from "react";
-import ProjectList from "@/data/projects";
+import ProjectList from "@/src/data/projects";
 import Image from "next/image";
 
 export default function Home() {
