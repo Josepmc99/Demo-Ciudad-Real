@@ -4,6 +4,9 @@ const nextConfig = {
     // ❌ No interrumpir el build por errores de ESLint
     ignoreDuringBuilds: true,
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
