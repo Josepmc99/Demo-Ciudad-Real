@@ -3,24 +3,7 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
-
-interface Project {
-  id: number;
-  name: string;
-  location: string;
-  latitude: number;
-  longitude: number;
-  cost: string;
-  squareMeters: string;
-  year: number;
-  budget: string;
-  description: string;
-  amenities: string[];
-  features: string[];
-  image: string;
-  additionalImages: string[];
-  mapCoordinates: { latitude: number; longitude: number };
-}
+import { Project } from "@/data/projects";
 
 const ProjectDetail = ({ project }: { project: Project }) => {
   return (

@@ -9,6 +9,24 @@
 // import Interior1 from "../assets/2.jpg";
 // import Interior2 from "../assets/3.jpg";
 // import Interior3 from "../assets/4.jpg";
+import { StaticImageData } from "next/image";
+
+export interface Project {
+  id: number;
+  name: string;
+  location: string;
+  latitude: number;
+  longitude: number;
+  cost: string;
+  squareMeters: string;
+  year: number;
+  budget: string;
+  description: string;
+  amenities: string[];
+  features: string[];
+  image: string | StaticImageData; // 👈 acepta string o import de imagen
+  additionalImages: (string | StaticImageData)[];
+}
 
 const ProjectList = [
   {
