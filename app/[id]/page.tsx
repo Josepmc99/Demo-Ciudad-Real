@@ -3,12 +3,12 @@ import PropertyDetail from "@/components/PropertyDetail";
 
 export async function generateStaticParams() {
   return ProjectList.map((p) => ({
-    id: p.id, // genera rutas estáticas /projects/1, /projects/2...
+    id: p.id.toString(), // siempre string
   }));
 }
 
-export default function ProjectPage({ params }: { params: { id: number } }) {
-  const project = ProjectList.find((p) => p.id === params.id);
+export default function ProjectPage({ params }: { params: { id: string } }) {
+  const project = ProjectList.find((p) => p.id.toString() === params.id);
 
   if (!project) {
     return <div>Proyecto no encontrado</div>;

@@ -17,8 +17,8 @@ interface ProjectCardProps {
   description: string;
   amenities: string[];
   features: string[];
-  image: StaticImageData;
-  additionalImages: StaticImageData[];
+  image: string;
+  additionalImages: string[];
   highlighted: boolean;
 }
 
