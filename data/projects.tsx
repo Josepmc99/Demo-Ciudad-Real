@@ -1,16 +1,3 @@
-// //Imagen principal del proyecto
-// import project1 from "../assets/1.jpg";
-// import project2 from "../assets/2.jpg";
-// import project3 from "../assets/3.jpg";
-// import project4 from "../assets/4.jpg";
-// import project5 from "../assets/5.jpg";
-
-// //Imagen secundaria del proyecto
-// import Interior1 from "../assets/2.jpg";
-// import Interior2 from "../assets/3.jpg";
-// import Interior3 from "../assets/4.jpg";
-import { StaticImageData } from "next/image";
-
 export interface Project {
   id: number;
   name: string;
@@ -24,8 +11,9 @@ export interface Project {
   description: string;
   amenities: string[];
   features: string[];
-  image: string | StaticImageData; // 👈 acepta string o import de imagen
-  additionalImages: (string | StaticImageData)[];
+  image: string;
+  additionalImages: string[];
+  mapCoordinates: { latitude: number; longitude: number };
 }
 
 const ProjectList = [

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { Project } from "@/data/projects";
 
@@ -17,6 +17,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
             width={680}
             height={400}
             className="rounded-lg shadow-lg object-cover"
+            unoptimized // importante para Vercel
           />
         </div>
         <div className="w-full md:w-1/2 md:pl-2 mt-4 md:mt-0">
@@ -65,14 +66,14 @@ const ProjectDetail = ({ project }: { project: Project }) => {
             {/* Imágenes adicionales */}
             <div className="flex gap-4 justify-center pt-10">
               {project.additionalImages.map((img, index) => (
-                <div key={index} className="w-48 h-38">
+                <div key={index} className="w-48 h-38 relative">
                   <Image
                     src={img}
                     alt={`Imagen adicional ${index + 1}`}
-                    layout="responsive"
-                    width={350}
-                    height={250}
-                    className="rounded-lg shadow-md object-cover cursor-pointer"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className="rounded-lg shadow-md cursor-pointer"
+                    unoptimized // <- importante para Vercel
                   />
                 </div>
               ))}
