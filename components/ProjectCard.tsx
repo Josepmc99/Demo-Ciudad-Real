@@ -57,12 +57,10 @@ const ProjectCard = ({
 
         <hr />
         <CardDescription className="mt-4 font-bold">{location}</CardDescription>
-        <div className="flex space-x-4 mb-2 mt-3 justify-between mr-10">
+        <div className="flex space-x-4 mb-2 mt-3 justify-between mr-15">
           <CardDescription>Fase: {state}</CardDescription>
           <CardDescription>Fin de obra: {year}</CardDescription>
         </div>
-        <CardDescription>Ejercicio: {year}</CardDescription>
-        <CardDescription>{location}</CardDescription>
       </CardHeader>
       <div className="flex justify-end px-2 pb-3">
         <Link href={`/${id}`}>
