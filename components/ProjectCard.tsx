@@ -12,12 +12,8 @@ interface ProjectCardProps {
   longitude: number;
   cost: string;
   squareMeters: string;
-<<<<<<< HEAD
   state: string;
   year: string;
-=======
-  year: number;
->>>>>>> main
   budget: string;
   description: string;
   amenities: string[];
@@ -35,10 +31,7 @@ const ProjectCard = ({
   longitude,
   cost,
   squareMeters,
-<<<<<<< HEAD
   state,
-=======
->>>>>>> main
   year,
   budget,
   description,
@@ -61,17 +54,15 @@ const ProjectCard = ({
       </div>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
-<<<<<<< HEAD
+
         <hr />
         <CardDescription className="mt-4 font-bold">{location}</CardDescription>
         <div className="flex space-x-4 mb-2 mt-3 justify-between mr-10">
           <CardDescription>Fase: {state}</CardDescription>
           <CardDescription>Fin de obra: {year}</CardDescription>
         </div>
-=======
         <CardDescription>Ejercicio: {year}</CardDescription>
         <CardDescription>{location}</CardDescription>
->>>>>>> main
       </CardHeader>
       <div className="flex justify-end px-2 pb-3">
         <Link href={`/${id}`}>
