@@ -12,7 +12,8 @@ interface ProjectCardProps {
   longitude: number;
   cost: string;
   squareMeters: string;
-  year: number;
+  state: string;
+  year: string;
   budget: string;
   description: string;
   amenities: string[];
@@ -30,6 +31,7 @@ const ProjectCard = ({
   longitude,
   cost,
   squareMeters,
+  state,
   year,
   budget,
   description,
@@ -52,8 +54,12 @@ const ProjectCard = ({
       </div>
       <CardHeader>
         <CardTitle>{name}</CardTitle>
-        <CardDescription>Ejercicio: {year}</CardDescription>
-        <CardDescription>{location}</CardDescription>
+        <hr />
+        <CardDescription className="mt-4 font-bold">{location}</CardDescription>
+        <div className="flex space-x-4 mb-2 mt-3 justify-between mr-10">
+          <CardDescription>Fase: {state}</CardDescription>
+          <CardDescription>Fin de obra: {year}</CardDescription>
+        </div>
       </CardHeader>
       <div className="flex justify-end px-2 pb-3">
         <Link href={`/${id}`}>

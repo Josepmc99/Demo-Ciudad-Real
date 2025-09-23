@@ -47,12 +47,12 @@ export default function Home() {
                 <div
                   onMouseEnter={() => setHoveredMarkerId(marker.id)}
                   onMouseLeave={() => setHoveredMarkerId(null)}
-                  className={`relative cursor-pointer w-15 h-15 transform transition-transform duration-200 
+                  className={`relative cursor-pointer w-10 h-10 transform transition-transform duration-200 
       ${hoveredMarkerId === marker.id ? "scale-120" : "scale-100"}`}
                 >
                   {/* Círculo principal con imagen */}
                   <div
-                    className={`rounded-full border-4 overflow-hidden w-full h-full
+                    className={`rounded-full border-2 overflow-hidden w-full h-full
         ${
           hoveredMarkerId === marker.id ? "border-green-500" : "border-gray-500"
         }`}

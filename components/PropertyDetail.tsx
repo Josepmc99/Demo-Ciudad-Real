@@ -47,7 +47,11 @@ const ProjectDetail = ({ project }: { project: Project }) => {
           </div>
           <div className="flex space-x-14 mt-10">
             <div className="flex flex-col items-center pl-4">
-              <h3 className="font-semibold">Fecha de ejecución:</h3>
+              <h3 className="font-semibold">Estado:</h3>
+              <p>{project.state}</p>
+            </div>
+            <div className="flex flex-col items-center pl-4">
+              <h3 className="font-semibold">Finalización:</h3>
               <p>{project.year}</p>
             </div>
             <div className="flex flex-col items-center">
