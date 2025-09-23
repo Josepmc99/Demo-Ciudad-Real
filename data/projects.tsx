@@ -136,6 +136,7 @@ const ProjectList = [
     image: "/images/5.jpg",
     additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    prueba: "hola",
   },
 ];
 
