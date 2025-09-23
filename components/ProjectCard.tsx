@@ -57,7 +57,7 @@ const ProjectCard = ({
 
         <hr />
         <CardDescription className="mt-4 font-bold">{location}</CardDescription>
-        <div className="flex space-x-4 mb-2 mt-3 justify-between mr-15">
+        <div className="flex space-x-4 mb-2 mt-3 justify-between mr-3">
           <CardDescription>Fase: {state}</CardDescription>
           <CardDescription>Fin de obra: {year}</CardDescription>
         </div>
