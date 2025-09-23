@@ -321,3 +321,21 @@ const ProjectList = [
 ];
 
 export default ProjectList;
+
+export interface Project {
+  id: number;
+  name: string;
+  location: string;
+  latitude: number;
+  longitude: number;
+  cost: string;
+  squareMeters: string;
+  year: number;
+  budget: string;
+  description: string;
+  amenities: string[];
+  features: string[];
+  image: string;
+  additionalImages: string[];
+  mapCoordinates: { latitude: number; longitude: number };
+}

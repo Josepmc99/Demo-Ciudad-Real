@@ -37,7 +37,10 @@ const PropertiesDisplay = ({ hoveredMarkerId }: PropertiesDisplayProps) => {
             longitude={project.longitude}
             cost={project.cost}
             squareMeters={project.squareMeters}
+<<<<<<< HEAD
             state={project.state}
+=======
+>>>>>>> main
             year={project.year}
             budget={project.budget}
             description={project.description}
