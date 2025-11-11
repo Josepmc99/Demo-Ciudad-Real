@@ -41,9 +41,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
             <span className="font-semibold">
               Financiado a través de fondos:{" "}
             </span>
-            <span className="text-2xl font-bold text-gray-900 px-2 pb-1">
-              {project.budget}
-            </span>
+            <span className="text-gray-900 px-2 pb-1">{project.budget}</span>
           </div>
           <div className="flex space-x-14 mt-10">
             <div className="flex flex-col items-center pl-4">
@@ -102,31 +100,80 @@ const ProjectDetail = ({ project }: { project: Project }) => {
       </div>
 
       {/* Características de la propiedad */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
-        <div className="flex flex-col items-center">
-          <h3 className="font-semibold text-gray-800">
-            Características del proyecto
-          </h3>
+      <div className="flex flex-col">
+        <h2 className="font-semibold text-gray-800 text-2xl">
+          Características del proyecto
+        </h2>
+        <div className="gap-4 mb-8">
+          <h4 className="font-bold mt-2">1. {project.features[0]}</h4>
           <ul className="mt-4 text-gray-600">
-            {project.amenities.map((amenity, index) => (
-              <li key={index} className="flex items-center space-x-2 mb-2">
+            {project.properties1.map((property, index) => (
+              <li
+                key={index}
+                className=" text-xs flex items-center space-x-2 mb-2"
+              >
                 <span className="text-blue-500">✓</span>
-                <span>{amenity}</span>
+                <span>{property}</span>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex flex-col items-center">
-          <h3 className="font-semibold text-gray-800"> </h3>
-          <ul className="mt-4 text-gray-600 pt-6">
-            {project.features.map((feature, index) => (
-              <li key={index} className="flex items-center space-x-2 mb-2">
+        <div className="gap-4 mb-8">
+          <h4 className="font-bold mt-2">2. {project.features[1]}</h4>
+          <ul className="mt-4 text-gray-600">
+            {project.properties2.map((property, index) => (
+              <li
+                key={index}
+                className=" text-xs flex items-center space-x-2 mb-2"
+              >
                 <span className="text-blue-500">✓</span>
-                <span>{feature}</span>
+                <span>{property}</span>
               </li>
             ))}
           </ul>
         </div>
+        <div className="gap-4 mb-8">
+          <h4 className="font-bold mt-2">3. {project.features[2]}</h4>
+          <ul className="mt-4 text-gray-600">
+            {project.properties3.map((property, index) => (
+              <li
+                key={index}
+                className=" text-xs flex items-center space-x-2 mb-2"
+              >
+                <span className="text-blue-500">✓</span>
+                <span>{property}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="gap-4 mb-8">
+          <h4 className="font-bold mt-2">4. {project.features[3]}</h4>
+          <ul className="mt-4 text-gray-600">
+            {project.properties4[0]
+              .split("-")
+              .filter((item) => item.trim() !== "") // elimina fragmentos vacíos
+              .map((property, index) => (
+                <li
+                  key={index}
+                  className="text-xs flex items-start space-x-2 mb-2"
+                >
+                  <span className="text-blue-500 mt-[2px]">✓</span>
+                  <span>{property.trim()}</span>
+                </li>
+              ))}
+          </ul>
+        </div>
+      </div>
+      <div className="flex flex-col items-center">
+        <h3 className="font-semibold text-gray-800"> </h3>
+        <ul className="mt-4 text-gray-600 pt-6">
+          {project.features.map((feature, index) => (
+            <li key={index} className="flex items-center space-x-2 mb-2">
+              <span className="text-blue-500">✓</span>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

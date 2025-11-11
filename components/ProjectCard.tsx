@@ -58,8 +58,8 @@ const ProjectCard = ({
         <hr />
         <CardDescription className="mt-4 font-bold">{location}</CardDescription>
         <div className="flex space-x-4 mb-2 mt-3 justify-between mr-3">
-          <CardDescription>Fase: {state}</CardDescription>
-          <CardDescription>Fin de obra: {year}</CardDescription>
+          <CardDescription>Estado: {state}</CardDescription>
+          <CardDescription>Fecha de ejecución: {year}</CardDescription>
         </div>
       </CardHeader>
       <div className="flex justify-end px-2 pb-3">

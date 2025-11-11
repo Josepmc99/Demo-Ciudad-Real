@@ -10,7 +10,10 @@ export interface Project {
   year: string;
   budget: string;
   description: string;
-  amenities: string[];
+  properties1: string[];
+  properties2: string[];
+  properties3: string[];
+  properties4: string[];
   features: string[];
   image: string;
   additionalImages: string[];
@@ -31,7 +34,7 @@ const ProjectList = [
     budget: "X",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -39,8 +42,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/1.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -49,23 +52,42 @@ const ProjectList = [
     location: "Parque Gasset, 13004 - Ciudad Real",
     latitude: 38.99397160970634,
     longitude: -3.9216821881939046,
-    cost: "X€",
+    cost: "440.927,76 €",
     state: "En ejecución",
     year: "29/09/2025",
-    squareMeters: "X m²",
-    budget: "X",
+    squareMeters: "4.560 m²",
+    budget:
+      "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Lorem ipsum",
-      "Lorem ipsum",
+    properties1: [
+      "Selección de especies autóctonas de bajo consumo hídrico",
+      "Supresión de tratamientos fitosanitarios",
+      "Mantenimiento de coberturas naturales del suelo",
+      "Siega controlada de herbáceas anuales tras su ciclo natural",
+      "Resiembra natural del terreno",
+      "Medidas para el fomento de la biodiversidad (Información complementaria incluida en las acciones C1 y C2)",
     ],
-    features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/1.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    properties2: [
+      "Sistema de goteo para arbolado y arbustos",
+      "Agua procedente de la red municipal",
+      "Duración mínima para garantizar el arraigo de especies",
+      "Desmontaje de la red secundaria una vez alcanzado el arraigo - Objetivo: eficiencia hídrica y mantenimiento responsable",
+    ],
+    properties3: [
+      "Creación de refugios naturales para fauna auxiliar: - Majanos de piedra - Pilas de madera - Refugios para insectos, reptiles y pequeños mamíferos",
+    ],
+    properties4: [
+      "Diseñado para albergar cuatro especies emblemáticas: - Avión → base adaptada para construcción de nidos (listones + malla metálica) - Vancejo → tres nidales por cara del cuadrado estructural - Autillo → dos nidales laterales para esta pequeña rapaz nocturna - Murciélagos → nidales adheridos al propio poste - Estructura orientada a favorecer la presencia de aves urbanas y control biológico de insectos",
+    ],
+    features: [
+      "Jardinería sostenible",
+      "Infraestructura de riego",
+      "Fomento de la biodiversidad",
+      "Poste de fauna (6 m de altura)",
+    ],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -74,14 +96,15 @@ const ProjectList = [
     location: "Avda. de Jesús Garrido, 13004 - Ciudad Real",
     latitude: 38.97534356505185,
     longitude: -3.9244893459639334,
-    cost: "X€",
+    cost: "270.569,40 €",
     state: "En ejecución",
     year: "10/02/2026",
-    squareMeters: "X m²",
-    budget: "X",
+    squareMeters: "10.880 m²",
+    budget:
+      "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -89,8 +112,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/1.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -99,23 +122,29 @@ const ProjectList = [
     location: "Avda. Leopoldo Calvo Sotelo, 13004 - Ciudad Real",
     latitude: 38.96992663357858,
     longitude: -3.923057844916591,
-    cost: "X€",
+    cost: "439.254,24 €",
     state: "En ejecución",
     year: "25/11/2025",
-    squareMeters: "X m²",
-    budget: "X",
+    squareMeters: "20.300 m²",
+    budget:
+      "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
     ],
-    features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/2.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    features: [
+      "Gestión de praderas sostenibles",
+      "Función ambiental y acústica",
+      "Red de riego localizado",
+      "Integración con el Geoparque Volcanes de Calatrava",
+    ],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -131,7 +160,7 @@ const ProjectList = [
     budget: "X",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -139,8 +168,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/2.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -149,23 +178,30 @@ const ProjectList = [
     location: "X, 13004 - Ciudad Real",
     latitude: 38.97148113664408,
     longitude: -3.921392951365409,
-    cost: "X€",
+    cost: "346.829,38 €",
     state: "En ejecución",
     year: " 11/01/2026",
-    squareMeters: "X m²",
-    budget: "X",
+    squareMeters: "16.266 m²",
+    budget:
+      "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
     ],
-    features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/3.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    features: [
+      "Recuperación del espacio",
+      "Mejora de la conectividad urbana",
+      "Plantaciones previstas",
+      "Corredor verde y drenaje sostenible",
+      "Parcela de la esquina Valdepeñas – Parque Cabañeros",
+    ],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -174,23 +210,31 @@ const ProjectList = [
     location: "X, 13004 - Ciudad Real",
     latitude: 38.96971719340843,
     longitude: -3.9331685306185684,
-    cost: "X€",
+    cost: "125.303,8 €",
     state: "En ejecución",
     year: " 17/01/2026",
-    squareMeters: "X m²",
-    budget: "X",
+    squareMeters: "9.700 m²",
+    budget:
+      "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
     ],
-    features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/3.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    features: [
+      "Ubicación y superficie",
+      "Zona esquina Avenida Reyes Católicos",
+      "Parcelas próximas a la Ronda Sur",
+      "Totales estimados:",
+      "Integración paisajística",
+      "Riego y mantenimiento",
+    ],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -199,23 +243,34 @@ const ProjectList = [
     location: "X, 13004 - Ciudad Real",
     latitude: 38.97428797080648,
     longitude: -3.942961987374368,
-    cost: "X€",
+    cost: "225.838,50 €",
     state: "Proceso de licitación",
     year: "Sin determinar",
-    squareMeters: "X m²",
-    budget: "X",
+    squareMeters: "697 m²",
+    budget:
+      "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
     ],
-    features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/3.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    features: [
+      "Acciones piloto y enfoque de economía circular",
+      "Urbanismo táctico verde – Barrio Pío XII",
+      "Ubicación y superficie",
+      "Diseño y elementos",
+      "2️Urbanismo táctico verde – Barrio San Antón",
+      "Mejora climática y naturalización",
+      "3️Eje arbolado de conexión Ronda Sur – Vía Verde",
+      "Conectividad verde y diseño",
+      "Finalidad de las acciones",
+    ],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -231,7 +286,7 @@ const ProjectList = [
     budget: "X",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -239,8 +294,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/4.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -256,7 +311,7 @@ const ProjectList = [
     budget: "X",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -264,8 +319,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/5.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -281,7 +336,7 @@ const ProjectList = [
     budget: "X",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -289,8 +344,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/5.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -306,7 +361,7 @@ const ProjectList = [
     budget: "X",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
-    amenities: [
+    properties1: [
       "Lorem ipsum",
       "Lorem ipsum",
       "Lorem ipsum",
@@ -314,8 +369,8 @@ const ProjectList = [
       "Lorem ipsum",
     ],
     features: ["Lorem ipsum", "Lorem ipsum", "Lorem ipsum", "Lorem ipsum"],
-    image: "/images/5.jpg",
-    additionalImages: ["/images/1.jpg", "/images/2.jpg", "/images/3.jpg"],
+    image: "/",
+    additionalImages: ["/", "/", "/"],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
 ];
