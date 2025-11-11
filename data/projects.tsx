@@ -10,10 +10,10 @@ export interface Project {
   year: string;
   budget: string;
   description: string;
-  properties1: string[];
-  properties2: string[];
-  properties3: string[];
-  properties4: string[];
+  properties1?: string[];
+  properties2?: string[];
+  properties3?: string[];
+  properties4?: string[];
   features: string[];
   image: string;
   additionalImages: string[];

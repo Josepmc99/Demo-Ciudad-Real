@@ -107,7 +107,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         <div className="gap-4 mb-8">
           <h4 className="font-bold mt-2">1. {project.features[0]}</h4>
           <ul className="mt-4 text-gray-600">
-            {project.properties1.map((property, index) => (
+            {project.properties1?.map((property, index) => (
               <li
                 key={index}
                 className=" text-xs flex items-center space-x-2 mb-2"
@@ -121,7 +121,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         <div className="gap-4 mb-8">
           <h4 className="font-bold mt-2">2. {project.features[1]}</h4>
           <ul className="mt-4 text-gray-600">
-            {project.properties2.map((property, index) => (
+            {project.properties2?.map((property, index) => (
               <li
                 key={index}
                 className=" text-xs flex items-center space-x-2 mb-2"
@@ -135,7 +135,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         <div className="gap-4 mb-8">
           <h4 className="font-bold mt-2">3. {project.features[2]}</h4>
           <ul className="mt-4 text-gray-600">
-            {project.properties3.map((property, index) => (
+            {project.properties3?.map((property, index) => (
               <li
                 key={index}
                 className=" text-xs flex items-center space-x-2 mb-2"
@@ -149,7 +149,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         <div className="gap-4 mb-8">
           <h4 className="font-bold mt-2">4. {project.features[3]}</h4>
           <ul className="mt-4 text-gray-600">
-            {project.properties4[0]
+            {(project.properties4?.[0] ?? "")
               .split("-")
               .filter((item) => item.trim() !== "") // elimina fragmentos vacíos
               .map((property, index) => (
