@@ -29,22 +29,7 @@ const PropertiesDisplay = ({ hoveredMarkerId }: PropertiesDisplayProps) => {
           }}
         >
           <ProjectCard
-            key={project.id}
-            id={project.id}
-            name={project.name}
-            location={project.location}
-            latitude={project.latitude}
-            longitude={project.longitude}
-            cost={project.cost}
-            squareMeters={project.squareMeters}
-            state={project.state}
-            year={project.year}
-            budget={project.budget}
-            description={project.description}
-            amenities={project.amenities}
-            features={project.features}
-            image={project.image}
-            additionalImages={project.additionalImages}
+            {...(project as any)}
             highlighted={hoveredMarkerId === project.id}
           />
         </div>
