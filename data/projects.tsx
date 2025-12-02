@@ -1,3 +1,5 @@
+import type { StaticImageData } from "next/image";
+
 import Gasset from "@/public/images/projects/Aparcamiento Gasset/Gasset_1.png";
 import Gasset1 from "@/public/images/projects/Aparcamiento Gasset/Gasset_1.png";
 import Gasset2 from "@/public/images/projects/Aparcamiento Gasset/Gasset_2.png";
@@ -76,12 +78,12 @@ export interface Project {
   properties7?: string[];
   properties8?: string[];
   features: string[];
-  image: string;
-  additionalImages: string[];
+  image: string | StaticImageData;
+  additionalImages: (string | StaticImageData)[];
   mapCoordinates: { latitude: number; longitude: number };
 }
 
-const ProjectList = [
+const ProjectList: Project[] = [
   {
     id: 1,
     name: "B1: Revegetación de Ejes Verdes. (AGROMORAL)",
