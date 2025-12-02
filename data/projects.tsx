@@ -1,9 +1,9 @@
-import Gasset from "../public/images/projects/Aparcamiento Gassset/Gasset.jpg";
-import Gasset1 from "../public/images/projects/Aparcamiento Gassset/Gasset_1.jpg";
-import Gasset2 from "../public/images/projects/Aparcamiento Gassset/Gasset_2.jpg";
-import Gasset3 from "../public/images/projects/Aparcamiento Gassset/Gasset_3.jpg";
-import Gasset4 from "../public/images/projects/Aparcamiento Gassset/Gasset_4.jpg";
-import Gasset5 from "../public/images/projects/Aparcamiento Gassset/Gasset_5.jpg";
+import Gasset from "../public/images/projects/Aparcamiento Gasset/Gasset.jpg";
+import Gasset1 from "../public/images/projects/Aparcamiento Gasset/Gasset_1.jpg";
+import Gasset2 from "../public/images/projects/Aparcamiento Gasset/Gasset_2.jpg";
+import Gasset3 from "../public/images/projects/Aparcamiento Gasset/Gasset_3.jpg";
+import Gasset4 from "../public/images/projects/Aparcamiento Gasset/Gasset_4.jpg";
+import Gasset5 from "../public/images/projects/Aparcamiento Gasset/Gasset_5.jpg";
 import Garrido from "../public/images/projects/Avenida Jesús Garrido/Garrido.jpg";
 import Garrido1 from "../public/images/projects/Avenida Jesús Garrido/Garrido_1.jpg";
 import Garrido2 from "../public/images/projects/Avenida Jesús Garrido/Garrido_2.jpg";
@@ -18,7 +18,6 @@ import Obispo6 from "../public/images/projects/Calle Obispo Rafael Torija/Obispo
 import Obispo7 from "../public/images/projects/Calle Obispo Rafael Torija/Obispo_7.jpg";
 import Obispo8 from "../public/images/projects/Calle Obispo Rafael Torija/Obispo_8.jpg";
 import UCLM from "../public/images/projects/Campus UCLM/UCLM.jpg";
-import UCLM1 from "../public/images/projects/Campus UCLM/UCLM_1.jpg";
 import UCLM2 from "../public/images/projects/Campus UCLM/UCLM_2.jpg";
 import UCLM3 from "../public/images/projects/Campus UCLM/UCLM_3.jpg";
 import UCLM4 from "../public/images/projects/Campus UCLM/UCLM_4.jpg";
