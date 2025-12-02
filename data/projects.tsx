@@ -1,4 +1,4 @@
-import Gasset from "../public/images/projects/Aparcamiento Gasset/Gasset.jpg";
+import Gasset from "../public/images/projects/Aparcamiento Gasset/Gasset_1.jpg";
 import Gasset1 from "../public/images/projects/Aparcamiento Gasset/Gasset_1.jpg";
 import Gasset2 from "../public/images/projects/Aparcamiento Gasset/Gasset_2.jpg";
 import Gasset3 from "../public/images/projects/Aparcamiento Gasset/Gasset_3.jpg";
@@ -714,7 +714,13 @@ const ProjectList = [
       "Proyecto experimental",
     ],
     image: Agronomos,
-    additionalImages: [Agronomos, Agronomos1, Agronomos2, Agronomos3],
+    additionalImages: [
+      Agronomos,
+      Agronomos1,
+      Agronomos2,
+      Agronomos3,
+      Agronomos4,
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
 ];
