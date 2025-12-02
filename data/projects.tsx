@@ -56,6 +56,13 @@ import Silos6 from "@/public/images/projects/Silos/Silos_6.png";
 import Silos7 from "@/public/images/projects/Silos/Silos_7.png";
 import Silos8 from "@/public/images/projects/Silos/Silos_8.png";
 import Espartero from "@/public/images/projects/General Espartero/Espartero.png";
+import Acupuntura from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura.png";
+import Acupuntura1 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_1.png";
+import Acupuntura2 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_2.png";
+import Acupuntura3 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_3.png";
+import Acupuntura4 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_4.png";
+import Acupuntura5 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_5.png";
+import Acupuntura6 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_6.png";
 
 export interface Project {
   id: number;
@@ -512,8 +519,15 @@ const ProjectList: Project[] = [
       "Conectividad verde y diseño",
       "Finalidad de las acciones",
     ],
-    image: "/",
-    additionalImages: ["/", "/", "/"],
+    image: Acupuntura,
+    additionalImages: [
+      Acupuntura1,
+      Acupuntura2,
+      Acupuntura3,
+      Acupuntura4,
+      Acupuntura5,
+      Acupuntura6,
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
