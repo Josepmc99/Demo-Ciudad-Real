@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
@@ -16,7 +16,7 @@ interface ProjectCardProps {
   year: string;
   budget: string;
   description: string;
-  amenities: string[];
+  amenities?: string[];
   features: string[];
   image: string;
   additionalImages: string[];
@@ -27,46 +27,51 @@ const ProjectCard = ({
   id,
   name,
   location,
-  latitude,
-  longitude,
-  cost,
-  squareMeters,
   state,
   year,
-  budget,
-  description,
-  amenities,
-  features,
   image,
-  additionalImages,
   highlighted,
 }: ProjectCardProps) => {
   return (
-    <Card className={`py-0 overflow-hidden ${highlighted ? " border-3" : ""}`}>
-      <div className="relative w-full h-48">
+    <Card
+      className={`
+        py-0 overflow-hidden h-full flex flex-col
+        ${highlighted ? "border-2 border-green-500 shadow-md" : ""}
+      `}
+    >
+      {/* Imagen responsiva */}
+      <div className="relative w-full h-36 sm:h-40 md:h-44 lg:h-48">
         <Image
-          alt="Project"
+          alt={name}
           src={image}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-md mt-0"
+          fill
+          className="object-cover rounded-t-md mt-0"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
         />
       </div>
-      <CardHeader>
-        <CardTitle>{name}</CardTitle>
 
-        <hr />
-        <CardDescription className="mt-4 font-bold">{location}</CardDescription>
-        <div className="flex space-x-4 mb-2 mt-3 justify-between mr-3">
+      <CardHeader className="pb-3">
+        <CardTitle className="text-base sm:text-lg md:text-xl">
+          {name}
+        </CardTitle>
+
+        <hr className="my-2" />
+
+        <CardDescription className="mt-2 text-xs sm:text-sm font-bold">
+          {location}
+        </CardDescription>
+
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-3 mt-3 text-xs sm:text-sm">
           <CardDescription>Estado: {state}</CardDescription>
           <CardDescription>Fecha de ejecución: {year}</CardDescription>
         </div>
       </CardHeader>
-      <div className="flex justify-end px-2 pb-3">
+
+      <div className="flex justify-end px-2 pb-3 mt-auto">
         <Link href={`/${id}`}>
           <Button
             size="sm"
-            className={`cursor-pointer hover:bg-green-500 ${
+            className={`cursor-pointer hover:bg-green-500 text-xs sm:text-sm px-3 sm:px-4 ${
               highlighted ? "bg-green-500" : ""
             }`}
           >
