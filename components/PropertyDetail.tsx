@@ -2,7 +2,13 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, MapPin, CheckCircle2 } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  MapPin,
+  CheckCircle2,
+  FileText,
+} from "lucide-react";
 import { Project } from "@/data/projects";
 
 const ProjectDetail = ({ project }: { project: Project }) => {
@@ -162,6 +168,18 @@ const ProjectDetail = ({ project }: { project: Project }) => {
           <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
             {/* Columna izquierda: características (ocupa 2 columnas en desktop) */}
             <div className="space-y-6 md:space-y-8 lg:col-span-2">
+              {project.description && (
+                <section>
+                  <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 sm:mb-4">
+                    Descripción del proyecto
+                  </h2>
+                  <div className="rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100">
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed whitespace-pre-line text-justify">
+                      {project.description}
+                    </p>
+                  </div>
+                </section>
+              )}
               {/* ==== CASO B6: ACUPUNTURA VERDE ==== */}
               {isAcupuntura ? (
                 <>
@@ -265,11 +283,13 @@ const ProjectDetail = ({ project }: { project: Project }) => {
 
               {/* Tarjeta resumen */}
               <section className="rounded-2xl bg-white p-4 sm:p-6 shadow-sm ring-1 ring-slate-100">
-                <h2 className="text-base sm:text-lg font-semibold text-slate-900">
-                  Información del proyecto
-                </h2>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h2 className="text-base sm:text-lg font-semibold text-slate-900">
+                    Información del proyecto
+                  </h2>
+                </div>
 
-                <dl className="mt-4 space-y-3 text-xs sm:text-sm">
+                <dl className="mt-2 space-y-3 text-xs sm:text-sm">
                   <div className="flex items-start justify-between gap-3">
                     <dt className="text-slate-500">Fondos destinados</dt>
                     <dd className="font-semibold text-slate-900 text-right">
@@ -302,6 +322,19 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                     </dd>
                   </div>
                 </dl>
+                <div className="mt-4 pt-4 border-t border-slate-200 flex justify-center">
+                  {project.pdfUrl && (
+                    <a
+                      href={project.pdfUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl border border-blue-200 px-3 py-1 text-xs sm:text-sm font-medium text-blue-700 hover:bg-blue-50 transition-colors"
+                    >
+                      <FileText size={14} />
+                      <span>Ficha detallada (PDF)</span>
+                    </a>
+                  )}
+                </div>
               </section>
 
               {/* Galería de imágenes adicionales con slide suave */}

@@ -70,6 +70,10 @@ export interface Project {
   location: string;
   latitude: number;
   longitude: number;
+  latitude1?: number;
+  longitude1?: number;
+  latitude2?: number;
+  longitude2?: number;
   cost: string;
   squareMeters: string;
   state: string;
@@ -92,15 +96,19 @@ export interface Project {
   image: string | StaticImageData;
   additionalImages: (string | StaticImageData)[];
   mapCoordinates: { latitude: number; longitude: number };
+  pdfUrl?: string;
 }
 
 const ProjectList: Project[] = [
   {
     id: 1,
     name: "B1: Revegetación de Ejes Verdes. (AGROMORAL)",
-    location: "Calle Obispo Rafael Torija, 13004 - Ciudad Real",
-    latitude: 38.99330862901038,
-    longitude: -3.9270952911833463,
+    location:
+      "Vereda de Moledores y Camino de los Mártires , 13004 - Ciudad Real",
+    latitude: 39.02002567449017,
+    longitude: -3.89395850989294,
+    latitude1: 39.01674527337518,
+    longitude1: -3.92218600440345,
     cost: "219.583,72 €",
     state: "Finalizado",
     year_ejecucion: "Sin información",
@@ -109,7 +117,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "La acción da continuidad a un eje verde para que conecte el monte de la Atalaya con el centro de la ciudad y así convertirlo en un corredor ecológico. Esta acción ayudará a una conexión completa de caminos con un nodo verde, y por tanto a la restauración y rehabilitación del entorno natural de la ciudad con el fin de aumentar el valor ecológico y social de ese entorno, muy utilizado para el ocio y el deporte. Las plantaciones de arbolado se harán en la Vereda de Moledores y camino de los Mártires, en los tramos donde no existe arbolado o está incompleto, para terminar así la conexión hasta el nodo verde que supone el monte de utilidad pública de la Atalaya. Se pretende a su vez, desincentivar el uso de la carretera P-2112 que da acceso a la Atalaya, por parte de ciclistas y peatones, dada la peligrosidad de su uso compartido con vehículos.",
+      "La acción da continuidad a un eje verde para que conecte el monte de la Atalaya con el centro de la ciudad y así convertirlo en un corredor ecológico. Esta acción ayudará a una conexión completa de caminos con un nodo verde, y por tanto a la restauración y rehabilitación del entorno natural de la ciudad con el fin de aumentar el valor ecológico y social de ese entorno, muy utilizado para el ocio y el deporte. Las plantaciones de arbolado se han hecho en la Vereda de Moledores y camino de los Mártires, en los tramos donde no existía arbolado o estaba incompleto, para terminar así la conexión hasta el nodo verde que supone el monte de utilidad pública de la Atalaya. Se pretende a su vez, desincentivar el uso de la carretera P-2112 que da acceso a la Atalaya, por parte de ciclistas y peatones, dada la peligrosidad de su uso compartido con vehículos.",
     properties1: [
       "2,9 km en Vereda de Moledores",
       "6,2 km en Camino de los Mártires",
@@ -160,6 +168,7 @@ const ProjectList: Project[] = [
       Obispo8,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 2,
@@ -221,6 +230,7 @@ const ProjectList: Project[] = [
     image: Gasset,
     additionalImages: [Gasset1, Gasset2, Gasset3, Gasset4, Gasset5],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 3,
@@ -229,14 +239,14 @@ const ProjectList: Project[] = [
     latitude: 38.97534356505185,
     longitude: -3.9244893459639334,
     cost: "270.569,40 €",
-    state: "En ejecución",
+    state: "Por ejecutar",
     year_ejecucion: "10/02/2026",
     year_finalizacion: "-",
     squareMeters: "10.880 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "En la avenida de Jesús Garrido existe un área calificada como zona verde de 10.880 m2 que está todavía sin ejecutar con una parcela en desuso y carente de cubierta vegetal. En esta zona de la ciudad está aumentado con la construcción de viviendas y la ciudadanía reclama zonas verdes próximas a sus viviendas y espacios para el paseo y el ocio. Este hecho se une a que esta zona verde forma parte de un anillo concéntrico y que con su renaturalización se conectaría el parque de Juan Pablo II con el pinar Isabel de Castilla (y la vía verde que sale de la ciudad por el sur). Esta zona cubriría las necesidades de esparcimiento en zonas verdes en verano, una necesidad creciente por la climatología de la zona, que provoca veranos con temperaturas sostenidas por encima de los 35ºC.",
+      "En la avenida de Jesús Garrido existe un área calificada como zona verde de 10.880 m2 que estaba todavía sin ejecutar con una parcela en desuso y carente de cubierta vegetal. En esta zona de la ciudad está aumentado con la construcción de viviendas y la ciudadanía reclama zonas verdes próximas a sus viviendas y espacios para el paseo y el ocio. Este hecho se une a que esta zona verde forma parte de un anillo concéntrico y que con su renaturalización se conectaría el parque de Juan Pablo II con el pinar Isabel de Castilla (y la vía verde que sale de la ciudad por el sur). Esta zona cubriría las necesidades de esparcimiento en zonas verdes en verano, una necesidad creciente por la climatología de la zona, que provoca veranos con temperaturas sostenidas por encima de los 35ºC.",
     properties1: [
       "Selección de especies autóctonas de bajo consumo hídrico",
       "Supresión de tratamientos fitosanitarios",
@@ -266,6 +276,7 @@ const ProjectList: Project[] = [
     image: Garrido,
     additionalImages: [Garrido, Garrido1, Garrido2, Garrido3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 4,
@@ -281,7 +292,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "En toda la longitud de la avenida Leopoldo Calvo Sotelo hay un área lineal paralela calificada como zona verde de 20.300 m2 que está todavía sin ejecutar. El área a renaturalizar conecta al norte con el nodo verde de los Silos (acción B4) y la pradera florida sostenible en ejecución de carretera de Valdepeñas, y al sur con la Segunda Ronda, que lleva pradera sostenible arbolada en el proyecto (inicio de las obras en 2023).La acción quiere convertir esta zona actualmente en desuso, en un parque-paseo arbolado que sea utilizado como vía verde para el paseo y el esparcimiento y sirva de eje de conexión verde dentro de la ciudad. ",
+      "En toda la longitud de la avenida Leopoldo Calvo Sotelo hay un área lineal paralela calificada como zona verde de 20.300 m2 que estaba todavía sin ejecutar. El área a renaturalizar conectará al norte con el nodo verde de los Silos (acción B4) y la pradera florida sostenible en ejecución de carretera de Valdepeñas, y al sur con la Segunda Ronda, que lleva pradera sostenible arbolada en el proyecto. La acción quiere convertir esta zona actualmente en desuso, en un parque-paseo arbolado que sea utilizado como vía verde para el paseo y el esparcimiento y sirva de eje de conexión verde dentro de la ciudad. ",
     properties1: [
       "Crecimiento libre entre otoño y primavera",
       "Fomento de floración y resiembra natural",
@@ -313,6 +324,7 @@ const ProjectList: Project[] = [
     image: Sotelo,
     additionalImages: [Sotelo1, Sotelo2, Sotelo3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 5,
@@ -359,6 +371,7 @@ const ProjectList: Project[] = [
     image: PIA,
     additionalImages: [PIA, PIA1, PIA2, PIA3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 6,
@@ -426,6 +439,7 @@ const ProjectList: Project[] = [
       Silos8,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 7,
@@ -482,6 +496,7 @@ const ProjectList: Project[] = [
     image: Espartero,
     additionalImages: [Espartero],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 8,
@@ -489,6 +504,10 @@ const ProjectList: Project[] = [
     location: "Calle Murillo con Calle José de Ribera, 13004 - Ciudad Real",
     latitude: 38.98157903355231,
     longitude: -3.9381351031288228,
+    latitude1: 38.99220343003354,
+    longitude1: -3.924184711829204,
+    latitude2: 38.96763526188639,
+    longitude2: -3.9318853451925615,
     cost: "225.838,50 €",
     state: "Proceso de licitación",
     year_ejecucion: "Sin determinar",
@@ -561,6 +580,7 @@ const ProjectList: Project[] = [
       Acupuntura6,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 9,
@@ -576,7 +596,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "El itinerario histórico que, atravesando la muralla medieval, unía el centro de la población con la ciudad islámica de Calatrava, quedó desfigurado por la implantación del campus universitario de UCLM. La ampliación del Campus al otro lado de la vía del ferrocarril en el Sector A-UNIV sobre ese itinerario, que es además una vía pecuaria (el camino de los Mártires), está poniendo en valor esa conexiónhaciendo relevante su recuperación. La acción pretende que, además de ser utilizado por estudiantes y ciudadanos (corredores y ciclistas) en su camino de salida de la ciudad, sirva de herramienta para facilitar la penetración de la naturaleza en la ciudad, renaturalizando zonas estratégicas entre las que se encuentra parte del aparcamiento del campus que interrumpe dicho itinerario que, además, en la actualidad, no es accesible. La acción es sencilla, pero estratégicamente muy relevante, ya que pretende dar continuidad al eje histórico de modo que permita volver a conectar el final de la calle Calatrava (centro urbano consolidado) con el conocido como Camino de los Mártires. Esto debe traducirse en una mejora de las condiciones de uso del itinerario por parte de peatones y ciclistas. Esta acción reforzará la actuación de acceso al campus prevista por el Ayuntamiento en la vecina Calle López Bustos que incorpora la parcela cedida por la Consejería de Educación correspondiente al polígono de la Granja Agrícola, sede del antiguo instituto masculino.Se colaborará con el Ayuntamiento para la coordinación de ambas actuaciones",
+      "El itinerario histórico que, atravesando la muralla medieval, unía el centro de la población con la ciudad islámica de Calatrava, quedó desfigurado por la implantación del campus universitario de UCLM. La ampliación del Campus al otro lado de la vía del ferrocarril en el Sector A-UNIV sobre ese itinerario, que es además una vía pecuaria (el camino de los Mártires), está poniendo en valor esa conexiónhaciendo relevante su recuperación. La acción pretende que, además de ser utilizado por estudiantes y ciudadanos (corredores y ciclistas) en su camino de salida de la ciudad, sirva de herramienta para facilitar la penetración de la naturaleza en la ciudad, renaturalizando zonas estratégicas entre las que se encuentra parte del aparcamiento del campus que interrumpe dicho itinerario que, además, no era accesible. La acción es sencilla, pero estratégicamente muy relevante, ya que da continuidad al eje histórico de modo que permita volver a conectar el final de la calle Calatrava (centro urbano consolidado) con el conocido como Camino de los Mártires. Esto debe traducirse en una mejora de las condiciones de uso del itinerario por parte de peatones y ciclistas. Esta acción reforzará la actuación de acceso al campus prevista por el Ayuntamiento en la vecina Calle López Bustos que incorpora la parcela cedida por la Consejería de Educación correspondiente al polígono de la Granja Agrícola, sede del antiguo instituto masculino.Se está colaborando con el Ayuntamiento para la coordinación de ambas actuaciones",
     properties1: [
       "Creación de un eje verde que conecte los dos núcleos universitarios (dentro y fuera del casco urbano)",
       "“Grieta verde” en el asfalto que une el espacio urbano y el campo",
@@ -621,6 +641,7 @@ const ProjectList: Project[] = [
     image: UCLM4,
     additionalImages: [UCLM2, UCLM3, UCLM4, UCLM5, UCLM6],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 10,
@@ -636,7 +657,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "El Campus de la UCLM se caracteriza por contar con abundante arbolado maduro, puesto que fue plantado a primeros de los años 90 del siglo XX priorizando el arbolado de sombra de rápido crecimiento. Por ese motivo, cuenta con escasa diversidad de especies al estar básicamente formado por plátanos de sombra, cedros y cipreses, además de algunos chopos en mal estado por la falta de adaptación al clima actual (sequedad ambiental y falta de lluvia). Por debajo del arbolado, el campus está ordenado mediante pequeños acerados que delimitan parterres no plantados a excepción de algún matorral, recubiertos en su día por gravas de puzolana roja, hoy muy deterioradas. La calidad de los espacios de estancia de estudiantes y otros ciudadanos en el Campus es muy deficitaria pese a la calidad de la sombra que les protege, por lo que se plantea la demolición de bordillos y acerados y la plantación de una pequeña zona de pradera sostenible que mejore el atractivo y la actividad del campus. Además, este espacio conectaría transversalmente la infraestructura verde del campus junto con el itinerario definido en la acción B7.1. y la renaturalización de las bolsas de aparcamiento de la acción B7.2. Estos espacios están en la actualidad claramente infrautilizados.Se pretende además en esta actuación, iniciar la regeneración mediante la sustitución de algunas unidades e introducción de arbolado y matorral autóctono con menor demanda hídrica y de más lento crecimiento. Se trata de iniciar un proceso que a largo plazo garantizaría la sostenibilidad de la cubierta vegetal del Campus, y reduciría los problemas de alergias generados por las especies dominantes en la actualidad. ",
+      "El Campus de la UCLM se caracteriza por contar con abundante arbolado maduro, puesto que fue plantado a primeros de los años 90 del siglo XX priorizando el arbolado de sombra de rápido crecimiento. Por ese motivo, cuenta con escasa diversidad de especies al estar básicamente formado por plátanos de sombra, cedros y cipreses, además de algunos chopos en mal estado por la falta de adaptación al clima actual (sequedad ambiental y falta de lluvia). Por debajo del arbolado, el campus está ordenado mediante pequeños acerados que delimitan parterres no plantados a excepción de algún matorral, recubiertos en su día por gravas de puzolana roja, hoy muy deterioradas. La calidad de los espacios de estancia de estudiantes y otros ciudadanos en el Campus es muy deficitaria pese a la calidad de la sombra que les protege, por lo que esta actuación planteaba la demolición de bordillos y acerados y la plantación de una pequeña zona de pradera sostenible con el objetivo de mejorar el atractivo y la actividad del campus. Además, este espacio conecta transversalmente la infraestructura verde del campus junto con el itinerario definido en la acción B7.1. y la renaturalización de las bolsas de aparcamiento de la acción B7.2. Estos espacios estaban claramente infrautilizados. Esta actuación pretendía iniciar la regeneración mediante la sustitución de algunas unidades e introducción de arbolado y matorral autóctono con menor demanda hídrica y de más lento crecimiento. Se trata de iniciar un proceso que a largo plazo garantice la sostenibilidad de la cubierta vegetal del Campus, y reduzca los problemas de alergias generados por las especies dominantes en la actualidad. ",
     properties1: [
       "Espacio del Campus Universitario, al norte de la Facultad de Químicas",
       "Demolición de acerados y bordillos que delimitan los parterres existentes",
@@ -661,6 +682,7 @@ const ProjectList: Project[] = [
     image: UCLM,
     additionalImages: [UCLM],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 11,
@@ -725,6 +747,7 @@ const ProjectList: Project[] = [
       Paseo7,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
   {
     id: 12,
@@ -740,7 +763,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "La Universidad de Castilla -La Mancha cuenta con un parque muy importante de edificios en sus campos de Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina. La eficiencia energética de estos edificios es muy importante en la reducción de consumos energéticos, siendo claves las medidas pasivas que mejoran el aislamiento térmico de los edificios. En este sentido, las cubiertas verdes son una interesante alternativa que además permite sustituir cubiertas planas “muertas” en espacios vivos. Pero más allá de instalar cubiertas verdes en sus edificios, al contar la UCLM con centros de investigación y docencia en Arquitectura e ingeniería agronómica, dispone de los medios humanos necesarios para realizar una investigación que permita evaluar diversas soluciones de cubiertas para explorar aquellas especies y soluciones que mejor se adapten al clima y circunstancias de los edificios de Castilla – La Mancha, de manera que los resultados sean transferibles a otros edificios de la UCLM y otros propietarios. Por este motivo, se plantea esta acción para apoyar la docencia y prácticas de los alumnos de la Escuela de Ingenieros Agrónomos en la línea de cultivo experimental sobre las cubiertas de aproximadamente 300 m2 de la propia Escuela de Ingenieros Agrónomos.",
+      "La Universidad de Castilla -La Mancha cuenta con un parque muy importante de edificios en sus campos de Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina. La eficiencia energética de estos edificios es muy importante en la reducción de consumos energéticos, siendo claves las medidas pasivas que mejoran el aislamiento térmico de los edificios. En este sentido, las cubiertas verdes son una interesante alternativa que además permite sustituir cubiertas planas “muertas” en espacios vivos. Pero más allá de instalar cubiertas verdes en sus edificios, al contar la UCLM con centros de investigación y docencia en Arquitectura e ingeniería agronómica, dispone de los medios humanos necesarios para realizar una investigación que permita evaluar diversas soluciones de cubiertas para explorar aquellas especies y soluciones que mejor se adapten al clima y circunstancias de los edificios de Castilla – La Mancha, de manera que los resultados sean transferibles a otros edificios de la UCLM y otros propietarios. Por este motivo, se planteaba esta acción para apoyar la docencia y prácticas de los alumnos de la Escuela de Ingenieros Agrónomos en la línea de cultivo experimental sobre las cubiertas de aproximadamente 300 m2 de la propia Escuela de Ingenieros Agrónomos.",
     properties1: [
       "La Universidad de Castilla-La Mancha (UCLM) dispone de un amplio parque de edificios en: - Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina.",
       "La eficiencia energética de sus edificios es clave en la reducción del consumo energético",
@@ -774,6 +797,7 @@ const ProjectList: Project[] = [
       Agronomos4,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
+    pdfUrl: "/",
   },
 ];
 

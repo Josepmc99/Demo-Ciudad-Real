@@ -29,6 +29,7 @@ export default function Home() {
   const mapboxToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
   const [hoveredMarkerId, setHoveredMarkerId] = useState<number | null>(null);
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   return (
     <div className="min-h-screen w-full bg-slate-50">
@@ -39,9 +40,9 @@ export default function Home() {
           <Map
             mapboxAccessToken={mapboxToken}
             initialViewState={{
-              longitude: -3.93,
-              latitude: 38.98,
-              zoom: 13,
+              longitude: -3.926759247802383,
+              latitude: 38.98839899477801,
+              zoom: 12,
             }}
             mapStyle={
               theme === "light"
@@ -49,42 +50,58 @@ export default function Home() {
                 : "mapbox://styles/mapbox/dark-v10"
             }
             style={{ width: "100%", height: "100%" }}
+            onLoad={() => setMapLoaded(true)}
           >
-            {ProjectList.map((marker) => (
-              <Marker
-                key={marker.id}
-                longitude={marker.longitude}
-                latitude={marker.latitude}
-                anchor="bottom"
-              >
-                <div
-                  onMouseEnter={() => setHoveredMarkerId(marker.id)}
-                  onMouseLeave={() => setHoveredMarkerId(null)}
-                  className={`relative cursor-pointer w-10 h-10 transform transition-transform duration-200 
-                    ${
-                      hoveredMarkerId === marker.id ? "scale-120" : "scale-100"
-                    }`}
-                >
-                  {/* Marcador circular con imagen */}
-                  <div
-                    className={`rounded-full border-2 overflow-hidden w-full h-full
-                      ${
-                        hoveredMarkerId === marker.id
-                          ? "border-green-500"
-                          : "border-gray-500"
-                      }`}
+            {mapLoaded &&
+              ProjectList.map((project) => {
+                // lista de varias ubicaciones para un mismo proyecto
+                const locations = [
+                  { lat: project.latitude, lon: project.longitude }, // ubicación principal
+
+                  ...(project.latitude1 != null && project.longitude1 != null
+                    ? [{ lat: project.latitude1, lon: project.longitude1 }]
+                    : []),
+
+                  ...(project.latitude2 != null && project.longitude2 != null
+                    ? [{ lat: project.latitude2, lon: project.longitude2 }]
+                    : []),
+                  // si algún día hace falta añadir latitude3/longitude3, etc, hay que seguir el mismo patrón
+                ];
+
+                return locations.map((loc, idx) => (
+                  <Marker
+                    key={`${project.id}-${idx}`}
+                    longitude={loc.lon}
+                    latitude={loc.lat}
+                    anchor="bottom"
                   >
-                    <Image
-                      src={marker.image}
-                      alt={marker.name}
-                      className="w-full h-full object-cover"
-                      width={64}
-                      height={64}
-                    />
-                  </div>
-                </div>
-              </Marker>
-            ))}
+                    <div
+                      onMouseEnter={() => setHoveredMarkerId(project.id)}
+                      onMouseLeave={() => setHoveredMarkerId(null)}
+                      className={`relative cursor-pointer w-10 h-10 transform transition-transform duration-200 
+            ${hoveredMarkerId === project.id ? "scale-120" : "scale-100"}`}
+                    >
+                      {/* Marcador circular con imagen del proyecto */}
+                      <div
+                        className={`rounded-full border-2 overflow-hidden w-full h-full
+              ${
+                hoveredMarkerId === project.id
+                  ? "border-green-500"
+                  : "border-gray-500"
+              }`}
+                      >
+                        <Image
+                          src={project.image}
+                          alt={project.name}
+                          className="w-full h-full object-cover"
+                          width={64}
+                          height={64}
+                        />
+                      </div>
+                    </div>
+                  </Marker>
+                ));
+              })}
           </Map>
         </div>
 
