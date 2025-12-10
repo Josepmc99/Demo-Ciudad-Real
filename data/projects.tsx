@@ -559,7 +559,7 @@ const ProjectList: Project[] = [
     longitude: -3.9254365242706752,
     cost: "84.656,00 €",
     state: "Finalizado",
-    year: "Sin información",
+    year: "15/07/2025",
     squareMeters: "725 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
@@ -617,8 +617,8 @@ const ProjectList: Project[] = [
     latitude: 38.992653322006504,
     longitude: -3.926005152599894,
     cost: "84.656,00 €",
-    state: "En ejecución",
-    year: "Sin información",
+    state: "Finalizado",
+    year: "10/11/2025",
     squareMeters: "1.100 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
@@ -720,7 +720,7 @@ const ProjectList: Project[] = [
     longitude: -3.920097928176967,
     cost: "51.823,20 €",
     state: "Finalizada",
-    year: "Sin información",
+    year: "25/09/2025",
     squareMeters: "300 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
