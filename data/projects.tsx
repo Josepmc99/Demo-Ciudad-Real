@@ -113,6 +113,11 @@ const ProjectList: Project[] = [
       "Creación de un paisaje natural y diverso",
     ],
     properties2: [
+      "135 Encinas (Quercus ilex)",
+      "670 Almeces (Celtis australis)",
+      "178 Olmos (Ulmus minor)",
+    ],
+    properties3: [
       "Taray (Tamarix gallica)",
       "Lentisco (Pistacia lentiscus)",
       "Chaparro (Quercus coccifera)",
@@ -120,12 +125,12 @@ const ProjectList: Project[] = [
       "Refugio y alimento para aves e insectos",
       "Mejora del equilibrio ecológico y paisajístico",
     ],
-    properties3: [
+    properties4: [
       "Riegos de apoyo con camión cisterna (primer verano)",
       "Reposición de plantas no viables",
       "Seguimiento para garantizar la consolidación vegetal",
     ],
-    properties4: [
+    properties5: [
       "Carteles descriptivos con logos de entidades participantes",
       "Mapa y resumen del proyecto",
       "Códigos QR para información digital -Inspirado en las rutas del Monte de la Atalaya -https://turismo.ciudadreal.es/project/senderismo",
@@ -166,30 +171,46 @@ const ProjectList: Project[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
     properties1: [
-      "Selección de especies autóctonas de bajo consumo hídrico",
-      "Supresión de tratamientos fitosanitarios",
-      "Mantenimiento de coberturas naturales del suelo",
-      "Siega controlada de herbáceas anuales tras su ciclo natural",
-      "Resiembra natural del terreno",
-      "Medidas para el fomento de la biodiversidad (Información complementaria incluida en las acciones C1 y C2)",
+      "Cortina vegetal perimetral junto a la ronda de circulación",
+      "Ordenación interior del aparcamiento con alta densidad de arbolado",
+      "Cobertura vegetal amplia para reducir el calentamiento del pavimento",
+      "Mantenimiento del carácter verde del espacio",
     ],
     properties2: [
-      "Sistema de goteo para arbolado y arbustos",
-      "Agua procedente de la red municipal",
-      "Duración mínima para garantizar el arraigo de especies",
-      "Desmontaje de la red secundaria una vez alcanzado el arraigo - Objetivo: eficiencia hídrica y mantenimiento responsable",
+      "268 unidades aproximadas: -78 Olmos (Ulmus minor) -137 Almeces (Celtis australis) -Otras especies autóctonas de gran porte (Función de sombra, confort térmico y mejora de la calidad del aire)",
     ],
     properties3: [
-      "Creación de refugios naturales para fauna auxiliar: - Majanos de piedra - Pilas de madera - Refugios para insectos, reptiles y pequeños mamíferos",
+      "800 unidades de especies diversas",
+      "Principales especies: -Madroños, Durillos, Tarays -Romeros, Lavandas, Acantos -Hiedra y Parra virgen (Favorecen la biodiversidad y el color estacional)",
     ],
     properties4: [
-      "Diseñado para albergar cuatro especies emblemáticas: - Avión → base adaptada para construcción de nidos (listones + malla metálica) - Vancejo → tres nidales por cara del cuadrado estructural - Autillo → dos nidales laterales para esta pequeña rapaz nocturna - Murciélagos → nidales adheridos al propio poste - Estructura orientada a favorecer la presencia de aves urbanas y control biológico de insectos",
+      "Retirada del asfalto existente mediante fresado y reutilización como firme",
+      "Uso de zahorras recicladas para la creación de pendientes",
+      "Promoción de la economía circular en la obra",
+      "Hormigón drenante en colores claros para viales y zonas de aparcamiento",
+    ],
+    properties5: [
+      "Arreates con gravas dispuestos perpendicularmente a la pendiente",
+      "Retención y filtrado natural de aguas pluviales hacia el subsuelo",
+      "Sin conexión al saneamiento, garantizando la infiltración total",
+    ],
+    properties6: [
+      "Especies autóctonas, de bajo consumo hídrico y alta resistencia climática",
+      "Riego con aguas subterráneas del parque",
+      "Sistema automatizado gestionado desde el programador central",
+    ],
+    properties7: [
+      "Plazas específicas para vehículos eléctricos",
+      "Aparcamiento verde y funcional, integrado en el entorno natural",
     ],
     features: [
-      "Jardinería sostenible",
-      "Infraestructura de riego",
-      "Fomento de la biodiversidad",
-      "Poste de fauna (6 m de altura)",
+      "Integración paisajística y sostenibilidad",
+      "Arbolado",
+      "Arbustos, trepadoras y vivaces",
+      "Pavimentos y economía circular",
+      "Drenaje sostenible",
+      "Criterios de plantación y riego",
+      "Movilidad sostenible",
     ],
     image: Gasset,
     additionalImages: [Gasset, Gasset1, Gasset2, Gasset3, Gasset4, Gasset5],
