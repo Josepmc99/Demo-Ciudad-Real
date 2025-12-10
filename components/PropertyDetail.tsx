@@ -29,20 +29,59 @@ const ProjectDetail = ({ project }: { project: Project }) => {
     return properties;
   };
 
-  const featureGroups = (project.features || [])
-    .map((title, idx) => {
-      // properties1, properties2, ... según el índice
-      const propKey = `properties${idx + 1}` as keyof Project;
-      const rawProps = project[propKey] as string[] | undefined;
+  const isAcupuntura =
+    project.id === 8 || project.name === "B6: Acupuntura Verde en Barrios";
 
-      return {
-        title,
-        properties: normalizeProperties(rawProps),
-      };
-    })
-    .filter(
-      (group) => group.title && group.properties && group.properties.length > 0
-    );
+  // ----- LÓGICA GENERAL (para todos excepto B6) -----
+  let featureGroups: { title: string; properties: string[] }[] = [];
+
+  if (!isAcupuntura) {
+    featureGroups = (project.features || [])
+      .map((title, idx) => {
+        const propKey = `properties${idx + 1}` as keyof Project;
+        const rawProps = project[propKey] as string[] | undefined;
+
+        return {
+          title,
+          properties: normalizeProperties(rawProps),
+        };
+      })
+      .filter(
+        (group) =>
+          group.title && group.properties && group.properties.length > 0
+      );
+  }
+
+  // ----- CASO ESPECIAL B6: ACUPUNTURA VERDE -----
+  const generalInfoAcupuntura = isAcupuntura
+    ? normalizeProperties(project.properties1)
+    : [];
+
+  const actuacionesAcupuntura = isAcupuntura
+    ? ([
+        {
+          title: project.actuacion1,
+          properties: [
+            ...normalizeProperties(project.properties3),
+            ...normalizeProperties(project.properties4),
+          ],
+        },
+        {
+          title: project.actuacion2,
+          properties: [...normalizeProperties(project.properties5)],
+        },
+        {
+          title: project.actuacion3,
+          properties: [
+            ...normalizeProperties(project.properties7),
+            ...normalizeProperties(project.properties8),
+          ],
+        },
+      ].filter((g) => g.title && g.properties && g.properties.length > 0) as {
+        title: string;
+        properties: string[];
+      }[])
+    : [];
 
   // Helper para obtener URL en caso de usar StaticImageData o string
   const getImageUrl = (img: any): string => {
@@ -123,36 +162,97 @@ const ProjectDetail = ({ project }: { project: Project }) => {
           <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
             {/* Columna izquierda: características (ocupa 2 columnas en desktop) */}
             <div className="space-y-6 md:space-y-8 lg:col-span-2">
-              {featureGroups.length > 0 && (
-                <section>
-                  <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 sm:mb-4">
-                    Características del proyecto
-                  </h2>
-
-                  <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
-                    {featureGroups.map((group, idx) => (
-                      <div
-                        key={idx}
-                        className="flex flex-col rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100"
-                      >
-                        <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-500">
-                          {idx + 1}. {group.title}
-                        </h3>
-                        <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-700">
-                          {group.properties!.map((property, i) => (
+              {/* ==== CASO B6: ACUPUNTURA VERDE ==== */}
+              {isAcupuntura ? (
+                <>
+                  {/* Información general (properties1) */}
+                  {generalInfoAcupuntura.length > 0 && (
+                    <section>
+                      <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 sm:mb-4">
+                        Información general del proyecto
+                      </h2>
+                      <div className="rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100">
+                        <ul className="space-y-2 text-xs sm:text-sm text-slate-700">
+                          {generalInfoAcupuntura.map((item, i) => (
                             <li key={i} className="flex items-start gap-2">
                               <CheckCircle2
                                 size={14}
                                 className="mt-[3px] shrink-0 text-blue-500"
                               />
-                              <span>{property}</span>
+                              <span>{item}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
-                    ))}
-                  </div>
-                </section>
+                    </section>
+                  )}
+
+                  {/* Actuaciones */}
+                  {actuacionesAcupuntura.length > 0 && (
+                    <section>
+                      <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 sm:mb-4">
+                        Actuaciones del proyecto
+                      </h2>
+
+                      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+                        {actuacionesAcupuntura.map((group, idx) => (
+                          <div
+                            key={idx}
+                            className="flex flex-col rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100"
+                          >
+                            <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-500">
+                              {group.title}
+                            </h3>
+                            <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-700">
+                              {group.properties.map((property, i) => (
+                                <li key={i} className="flex items-start gap-2">
+                                  <CheckCircle2
+                                    size={14}
+                                    className="mt-[3px] shrink-0 text-blue-500"
+                                  />
+                                  <span>{property}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    </section>
+                  )}
+                </>
+              ) : (
+                /* ==== RESTO DE PROYECTOS ==== */
+                featureGroups.length > 0 && (
+                  <section>
+                    <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 sm:mb-4">
+                      Características del proyecto
+                    </h2>
+
+                    <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+                      {featureGroups.map((group, idx) => (
+                        <div
+                          key={idx}
+                          className="flex flex-col rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100"
+                        >
+                          <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-500">
+                            {idx + 1}. {group.title}
+                          </h3>
+                          <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-700">
+                            {group.properties.map((property, i) => (
+                              <li key={i} className="flex items-start gap-2">
+                                <CheckCircle2
+                                  size={14}
+                                  className="mt-[3px] shrink-0 text-blue-500"
+                                />
+                                <span>{property}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )
               )}
             </div>
 
@@ -186,7 +286,13 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                   <div className="flex items-center justify-between gap-3">
                     <dt className="text-slate-500">Fecha de ejecución</dt>
                     <dd className="font-medium text-slate-900">
-                      {project.year}
+                      {project.year_ejecucion}
+                    </dd>
+                  </div>
+                  <div className="flex items-center justify-between gap-3">
+                    <dt className="text-slate-500">Fecha de finalización</dt>
+                    <dd className="font-medium text-slate-900">
+                      {project.year_finalizacion}
                     </dd>
                   </div>
                   <div className="flex items-center justify-between gap-3">

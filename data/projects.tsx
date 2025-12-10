@@ -73,7 +73,8 @@ export interface Project {
   cost: string;
   squareMeters: string;
   state: string;
-  year: string;
+  year_ejecucion: string;
+  year_finalizacion: string;
   budget: string;
   description: string;
   properties1?: string[];
@@ -85,6 +86,9 @@ export interface Project {
   properties7?: string[];
   properties8?: string[];
   features: string[];
+  actuacion1?: string;
+  actuacion2?: string;
+  actuacion3?: string;
   image: string | StaticImageData;
   additionalImages: (string | StaticImageData)[];
   mapCoordinates: { latitude: number; longitude: number };
@@ -99,12 +103,13 @@ const ProjectList: Project[] = [
     longitude: -3.9270952911833463,
     cost: "219.583,72 €",
     state: "Finalizado",
-    year: "11/06/2025",
+    year_ejecucion: "Sin información",
+    year_finalizacion: "11/06/2025",
     squareMeters: "14.050 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "La acción da continuidad a un eje verde para que conecte el monte de la Atalaya con el centro de la ciudad y así convertirlo en un corredor ecológico. Esta acción ayudará a una conexión completa de caminos con un nodo verde, y por tanto a la restauración y rehabilitación del entorno natural de la ciudad con el fin de aumentar el valor ecológico y social de ese entorno, muy utilizado para el ocio y el deporte. Las plantaciones de arbolado se harán en la Vereda de Moledores y camino de los Mártires, en los tramos donde no existe arbolado o está incompleto, para terminar así la conexión hasta el nodo verde que supone el monte de utilidad pública de la Atalaya. Se pretende a su vez, desincentivar el uso de la carretera P-2112 que da acceso a la Atalaya, por parte de ciclistas y peatones, dada la peligrosidad de su uso compartido con vehículos.",
     properties1: [
       "2,9 km en Vereda de Moledores",
       "6,2 km en Camino de los Mártires",
@@ -160,16 +165,17 @@ const ProjectList: Project[] = [
     id: 2,
     name: "B2: Renaturalización Aparcamiento Gasset (AGROMORAL)",
     location: "Parque Gasset, 13004 - Ciudad Real",
-    latitude: 38.99397160970634,
-    longitude: -3.9216821881939046,
+    latitude: 38.98246257292996,
+    longitude: -3.9342872821101307,
     cost: "440.927,76 €",
     state: "En ejecución",
-    year: "29/09/2025",
+    year_ejecucion: "29/09/2025",
+    year_finalizacion: "-",
     squareMeters: "4.560 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "Dentro del Parque Gasset se dispone de una parcela con una superficie de 4.560 m2 que se encuentra sin resolver y que viene siendo utilizada como aparcamiento disuasorio. El aparcamiento no está ordenado y cuenta con un suelo en asfalto muy degradado. Este aparcamiento tiene un marcado carácter estratégico, pues se localiza al borde la futura Zona de Bajas Emisiones (ZBE). La acción pretende resolver esta zona verde y, a modo de infraestructura al servicio del propio parque y sin que pierda su carácter de zona verde, se haga compatible con la función de aparcamiento periférico de forma que se incentiven los modelos de movilidad activa en la ciudad. Por este motivo, se reducirá la ocupación actual, con más de 250 vehículos aparcados a un máximo de 138 tras la intervención.",
     properties1: [
       "Cortina vegetal perimetral junto a la ronda de circulación",
       "Ordenación interior del aparcamiento con alta densidad de arbolado",
@@ -213,7 +219,7 @@ const ProjectList: Project[] = [
       "Movilidad sostenible",
     ],
     image: Gasset,
-    additionalImages: [Gasset, Gasset1, Gasset2, Gasset3, Gasset4, Gasset5],
+    additionalImages: [Gasset1, Gasset2, Gasset3, Gasset4, Gasset5],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
   },
   {
@@ -224,12 +230,13 @@ const ProjectList: Project[] = [
     longitude: -3.9244893459639334,
     cost: "270.569,40 €",
     state: "En ejecución",
-    year: "10/02/2026",
+    year_ejecucion: "10/02/2026",
+    year_finalizacion: "-",
     squareMeters: "10.880 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "En la avenida de Jesús Garrido existe un área calificada como zona verde de 10.880 m2 que está todavía sin ejecutar con una parcela en desuso y carente de cubierta vegetal. En esta zona de la ciudad está aumentado con la construcción de viviendas y la ciudadanía reclama zonas verdes próximas a sus viviendas y espacios para el paseo y el ocio. Este hecho se une a que esta zona verde forma parte de un anillo concéntrico y que con su renaturalización se conectaría el parque de Juan Pablo II con el pinar Isabel de Castilla (y la vía verde que sale de la ciudad por el sur). Esta zona cubriría las necesidades de esparcimiento en zonas verdes en verano, una necesidad creciente por la climatología de la zona, que provoca veranos con temperaturas sostenidas por encima de los 35ºC.",
     properties1: [
       "Selección de especies autóctonas de bajo consumo hídrico",
       "Supresión de tratamientos fitosanitarios",
@@ -268,12 +275,13 @@ const ProjectList: Project[] = [
     longitude: -3.923057844916591,
     cost: "439.254,24 €",
     state: "En ejecución",
-    year: "25/11/2025",
+    year_ejecucion: "25/11/2025",
+    year_finalizacion: "-",
     squareMeters: "20.300 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "En toda la longitud de la avenida Leopoldo Calvo Sotelo hay un área lineal paralela calificada como zona verde de 20.300 m2 que está todavía sin ejecutar. El área a renaturalizar conecta al norte con el nodo verde de los Silos (acción B4) y la pradera florida sostenible en ejecución de carretera de Valdepeñas, y al sur con la Segunda Ronda, que lleva pradera sostenible arbolada en el proyecto (inicio de las obras en 2023).La acción quiere convertir esta zona actualmente en desuso, en un parque-paseo arbolado que sea utilizado como vía verde para el paseo y el esparcimiento y sirva de eje de conexión verde dentro de la ciudad. ",
     properties1: [
       "Crecimiento libre entre otoño y primavera",
       "Fomento de floración y resiembra natural",
@@ -310,16 +318,17 @@ const ProjectList: Project[] = [
     id: 5,
     name: "B3.3: Corredor Verde en el Polígono Industrial Avanzado (PIA) (GEOSTINSER)",
     location: "Polígono industrial Avanzado (PIA), 13004 - Ciudad Real",
-    latitude: 38.98710655110122,
-    longitude: -3.9050494624692678,
+    latitude: 38.98388512613636,
+    longitude: -3.9092805642888924,
     cost: "121.725,80 €",
     state: "Por ejecutar",
-    year: "02/01/2026",
+    year_ejecucion: "02/01/2026",
+    year_finalizacion: "-",
     squareMeters: "14.079 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "Esta es una acción diseñada para dar continuidad y establecer una conexión verde entre una zona periurbana (polígono industrial) y la zona urbana, separada por una infraestructura ferroviaria como es la vía del AVE. Se trata de realizar un ajardinamiento de bajo mantenimiento en 14.079 m2 de zonas verdes sin ejecutar en el Polígono industrial Avanzado (PIA) de forma similar al que se ha ejecutado en otros viales del PIA para darle continuidad al ya existente y conexionar la zona con el ámbito.",
     properties1: [
       "Arbolado de sombra combinado con especies autóctonas",
       "Parterres de aromáticas: lavandas, tomillo y romero",
@@ -356,16 +365,17 @@ const ProjectList: Project[] = [
     name: "B4: Renaturalización del Espacio de los Silos como Nodo Verde (PROIMANCHA)",
     location:
       "Barrio de San Vicente Paul con la zona verde de la Carretera de Valdepeñas, 13004 - Ciudad Real",
-    latitude: 38.97148113664408,
-    longitude: -3.921392951365409,
+    latitude: 38.97783004381877,
+    longitude: -3.918833747616386,
     cost: "346.829,38 €",
-    state: "En ejecución",
-    year: " 11/01/2026",
+    state: "Por ejecutar",
+    year_ejecucion: " 11/01/2026",
+    year_finalizacion: "-",
     squareMeters: "16.266 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "Los silos de Ciudad Real forman parte de la Red Nacional de Silos, patrimonio arquitectónico y cultural de la historia reciente de España. Desde hace más de tres décadas estas construcciones se encuentran en estado de abandono y solo parte de una de las naves se utiliza actualmente como almacén para algunos servicios municipales. Es una queja vecinal recurrente el estado de abandono de esa parcela. Por ello, en la Agenda Urbana de Ciudad Real la recuperación de este espacio se ha diagnosticado como reto, y las propuestas para dar vida a los Silos se están trabajando dentro del plan de acción de la Agenda Urbana. La parcela donde están construidos los silos, de 7.800 m2, actualmente en estado de degradación, donde se acopian materiales y mobiliario urbano en desuso, está calificada en el PGOU de Ciudad Real como zona verde. La acción contempla la restauración de la parcela de los silos convirtiéndola en una zona verde, donde se revalorice un patrimonio industrial de la ciudad y que a su vez aporte servicios ecosistémicos como nodo de conexión entre corredores verdes de la ciudad. Por sus características de ausencia de actividad, distancia a edificaciones y altura, el edificio tiene un elevado potencial de uso como espacio de nidificación de especies diversas como murciélagos, golondrinas o vencejos. Asimismo, podría constituir un emplazamiento idóneo para el desarrollo de un proyecto a largo plazo de consolidación de un primillar que permitiera incrementar la población de cernícalo primilla (Falco naumanni) en nuestra ciudad. Otra acción complementaria es la obtención de la parcela colindante de 2.290 m2 para poder ampliar el espacio creado en el marco de este proyecto. Con ello, se crearía una zona verde de 16.266 m2 que integraría el actual parque de San Vicente de Paul con las dos zonas creadas.",
     properties1: [
       "Retirada de materiales inservibles y recuperación del suelo original empedrado",
       "Reposición de arbolado: sustitución de ejemplares muertos o en mal estado",
@@ -424,13 +434,14 @@ const ProjectList: Project[] = [
     latitude: 38.96960041316773,
     longitude: -3.9332650901461714,
     cost: "125.303,8 €",
-    state: "En ejecución",
-    year: " 17/01/2026",
+    state: "Por ejecutar",
+    year_ejecucion: " 17/01/2026",
+    year_finalizacion: "-",
     squareMeters: "9.700 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "La acción consiste en la creación de una zona verde colindante al Hospital General de Ciudad Real que conecte la actual zona renaturalizada, el pinar de Isabel de Castilla con la segunda Ronda y el exterior del casco urbano. Esta acción es complementaria a la ejecución de la segunda Ronda Sur, que fue ejecutada recientemente.",
     properties1: [
       "Corredor verde situado al oeste del Hospital General, a lo largo de la calle General Espartero",
       "Dividido en cinco parcelas por los accesos del hospital",
@@ -458,7 +469,7 @@ const ProjectList: Project[] = [
     properties6: [
       "Red de riego localizado con programación centralizada",
       "Duración mínima para asegurar el arraigo de arbolado y arbustos",
-      "Desmantelamiento posterior de la red, salvo en la zona de trepadoras -Gestión eficiente del agua y mantenimiento sostenibl",
+      "Desmantelamiento posterior de la red, salvo en la zona de trepadoras -Gestión eficiente del agua y mantenimiento sostenible",
     ],
     features: [
       "Ubicación y superficie",
@@ -476,16 +487,17 @@ const ProjectList: Project[] = [
     id: 8,
     name: "B6: Acupuntura Verde en Barrios",
     location: "Calle Murillo con Calle José de Ribera, 13004 - Ciudad Real",
-    latitude: 38.982553239656,
-    longitude: -3.93863248243224,
+    latitude: 38.98157903355231,
+    longitude: -3.9381351031288228,
     cost: "225.838,50 €",
     state: "Proceso de licitación",
-    year: "Sin determinar",
+    year_ejecucion: "Sin determinar",
+    year_finalizacion: "-",
     squareMeters: "697 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "Esta acción agrupa tres intervenciones piloto en tres barrios distintos de la ciudad para así testar con la ciudadanía de los barrios, pequeñas intervenciones de recuperación de espacio público hacia espacios más verdes y sostenibles, y así en futuros proyectos poder ampliar las actuaciones o bien replicarlas en otros barrios de la ciudad. De las tres intervenciones, dos de ellas quieren humanizar y recuperar el espacio público en los barrios de la ciudad. Dos de los barrios de actuación (San Antón y Pio XII) son barrios humildes, diseñados en los años 60 por una cooperativa de viviendas de los trabajadores del ferrocarril en Pio XII y con viviendas de protección oficial en San Antón. Ambos barrios, de origen humilde y construcciones sencillas, se diseñaron sin apenas zonas verdes o de esparcimiento entre los bloques de viviendas. Con los años, algunos vecinos ajardinaron los espacios privados entre bloques, y el Ayuntamiento plantó arbolado viario en las calles principales. Sin embargo, quedan muchos bloques muy expuestos al efecto isla de calor por estar rodeados de asfalto y sin arbolado de sombra alrededor, y faltan espacios para la convivencia vecinal. La tercera intervención generará un pequeño corredor arbolado entre parcelas de bloques de viviendas que, a su vez, conexionará los ejes verdes de la Ronda Sur y la Vía Verde.",
     properties1: [
       "Intervención en dos pequeñas zonas urbanas y un corredor arbolado",
       "Objetivo: testar soluciones de reverdecimiento a pequeña escala para replicarlas en otras áreas de Ciudad Real y municipios colindantes",
@@ -493,7 +505,6 @@ const ProjectList: Project[] = [
       "Modelo de acciones a pequeña escala (SSA – Small Scale Actions)",
       "Estrategia: probar, evaluar y escalar soluciones sostenibles ya testadas",
     ],
-
     properties3: [
       "Actuación piloto en dos pequeñas zonas del barrio",
       "Superficie total: 697 m",
@@ -531,15 +542,15 @@ const ProjectList: Project[] = [
     ],
     features: [
       "Acciones piloto y enfoque de economía circular",
-      "Urbanismo táctico verde – Barrio Pío XII",
       "Ubicación y superficie",
       "Diseño y elementos",
-      "Urbanismo táctico verde – Barrio San Antón",
       "Mejora climática y naturalización",
-      "Eje arbolado de conexión Ronda Sur – Vía Verde",
       "Conectividad verde y diseño",
       "Finalidad de las acciones",
     ],
+    actuacion1: "Urbanismo táctico verde – Barrio Pío XII",
+    actuacion2: "Urbanismo táctico verde – Barrio San Antón",
+    actuacion3: "Eje arbolado de conexión Ronda Sur – Vía Verde",
     image: Acupuntura,
     additionalImages: [
       Acupuntura1,
@@ -559,12 +570,13 @@ const ProjectList: Project[] = [
     longitude: -3.9254365242706752,
     cost: "84.656,00 €",
     state: "Finalizado",
-    year: "15/07/2025",
+    year_ejecucion: "Sin información",
+    year_finalizacion: "15/07/2025",
     squareMeters: "725 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "El itinerario histórico que, atravesando la muralla medieval, unía el centro de la población con la ciudad islámica de Calatrava, quedó desfigurado por la implantación del campus universitario de UCLM. La ampliación del Campus al otro lado de la vía del ferrocarril en el Sector A-UNIV sobre ese itinerario, que es además una vía pecuaria (el camino de los Mártires), está poniendo en valor esa conexiónhaciendo relevante su recuperación. La acción pretende que, además de ser utilizado por estudiantes y ciudadanos (corredores y ciclistas) en su camino de salida de la ciudad, sirva de herramienta para facilitar la penetración de la naturaleza en la ciudad, renaturalizando zonas estratégicas entre las que se encuentra parte del aparcamiento del campus que interrumpe dicho itinerario que, además, en la actualidad, no es accesible. La acción es sencilla, pero estratégicamente muy relevante, ya que pretende dar continuidad al eje histórico de modo que permita volver a conectar el final de la calle Calatrava (centro urbano consolidado) con el conocido como Camino de los Mártires. Esto debe traducirse en una mejora de las condiciones de uso del itinerario por parte de peatones y ciclistas. Esta acción reforzará la actuación de acceso al campus prevista por el Ayuntamiento en la vecina Calle López Bustos que incorpora la parcela cedida por la Consejería de Educación correspondiente al polígono de la Granja Agrícola, sede del antiguo instituto masculino.Se colaborará con el Ayuntamiento para la coordinación de ambas actuaciones",
     properties1: [
       "Creación de un eje verde que conecte los dos núcleos universitarios (dentro y fuera del casco urbano)",
       "“Grieta verde” en el asfalto que une el espacio urbano y el campo",
@@ -614,16 +626,17 @@ const ProjectList: Project[] = [
     id: 10,
     name: "B7.3: Regeneración de la vegetación del Campus UCLM",
     location: "Campus universitario UCLM, 13004 - Ciudad Real",
-    latitude: 38.992653322006504,
-    longitude: -3.926005152599894,
+    latitude: 38.99491093519401,
+    longitude: -3.921046121941976,
     cost: "84.656,00 €",
     state: "Finalizado",
-    year: "10/11/2025",
+    year_ejecucion: "Sin información",
+    year_finalizacion: "10/11/2025",
     squareMeters: "1.100 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "El Campus de la UCLM se caracteriza por contar con abundante arbolado maduro, puesto que fue plantado a primeros de los años 90 del siglo XX priorizando el arbolado de sombra de rápido crecimiento. Por ese motivo, cuenta con escasa diversidad de especies al estar básicamente formado por plátanos de sombra, cedros y cipreses, además de algunos chopos en mal estado por la falta de adaptación al clima actual (sequedad ambiental y falta de lluvia). Por debajo del arbolado, el campus está ordenado mediante pequeños acerados que delimitan parterres no plantados a excepción de algún matorral, recubiertos en su día por gravas de puzolana roja, hoy muy deterioradas. La calidad de los espacios de estancia de estudiantes y otros ciudadanos en el Campus es muy deficitaria pese a la calidad de la sombra que les protege, por lo que se plantea la demolición de bordillos y acerados y la plantación de una pequeña zona de pradera sostenible que mejore el atractivo y la actividad del campus. Además, este espacio conectaría transversalmente la infraestructura verde del campus junto con el itinerario definido en la acción B7.1. y la renaturalización de las bolsas de aparcamiento de la acción B7.2. Estos espacios están en la actualidad claramente infrautilizados.Se pretende además en esta actuación, iniciar la regeneración mediante la sustitución de algunas unidades e introducción de arbolado y matorral autóctono con menor demanda hídrica y de más lento crecimiento. Se trata de iniciar un proceso que a largo plazo garantizaría la sostenibilidad de la cubierta vegetal del Campus, y reduciría los problemas de alergias generados por las especies dominantes en la actualidad. ",
     properties1: [
       "Espacio del Campus Universitario, al norte de la Facultad de Químicas",
       "Demolición de acerados y bordillos que delimitan los parterres existentes",
@@ -653,16 +666,17 @@ const ProjectList: Project[] = [
     id: 11,
     name: "B8: Paseo ecosistémico en el Campus exterior y tanque de tormentas para el reciclado de aguas pluviales (SECTOR A-UNI)",
     location: "Campus Universitario UCLM, 13004 - Ciudad Real",
-    latitude: 38.992843463087375,
-    longitude: -3.923747811323258,
+    latitude: 38.99834019615393,
+    longitude: -3.920428885991783,
     cost: "511.960,80 €",
     state: "En ejecución",
-    year: "Sin información",
+    year_ejecucion: "Sin información",
+    year_finalizacion: "-",
     squareMeters: "4.000 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "La UCLM no solo es un sistema de generación de conocimiento, sino que actúa como potenciadora del emprendimiento y desarrollo de nuestra Comunidad Autónoma. Actualmente, el sector A-UNI que, en la primera década del siglo XXI vio frustrado su desarrollo urbanístico, resulta una ubicación conveniente para alojar todas aquellas actividades de investigación que requieren de infraestructuras específicas por sus singulares características. Es también donde se instala el vivero de empresas nacidas alamparo de la investigación (“Spin Off”). El fracaso del Programa de Actuación Urbanizadora del sector A-Uni en los años 2000 abre la oportunidad de renunciar a esa urbanización “dura” y actuar hacia la consolidación del parque dotacional parque I+D+i UCLM como Campus verde de urbanización blanda que minimice su afección al medio y pueda servir de prototipo de otros espacios similares a desarrollar en otros campus de la UCLM o en la región. El suelo está en la actualidad muy degradado, al ser el resultado de un suelo agrícola de secano sin labrar y con áreas compactadas por el paso de vehículos, por lo que apenas está vegetado, cuando no es utilizado como vertedero ilegal. La acción pretende completar la urbanización “blanda” preexistente sobre la que se ubican las instalaciones universitarias, generando un nodo verde en el que se mezcla la infraestructura verde urbana y periurbana. Para ello, se plantea la creación de paseo perimetral de unos 600 metros de longitud que permita la plantación árboles y arbustos de especies diversas y sirva de para revegetar ese borde del parque dotacional y su conexión con el espacio natural de la vía pecuaria del Camino de Moledores. Estas líneas de arbolado mejorarán también la protección frente al ruido generado por la línea del ferrocarril de Alta Velocidad Madrid – Sevilla que limita el sector por el Oeste. Además, se recogerán las pluviales del sector en un pequeño tanque de tormentas para reutilizarlas en riegos, se permeabilizará el aparcamiento conectándolo a las nuevas vías perimetrales y liberando el acceso por la vía pecuaria vecina (Camino de Moledores), y se sustituirá el césped existente en la zona por una pradera natural.",
     properties1: [
       "Zona exterior junto a la valla del camino de servicio del AVE",
       "Creación de una pradera vegetal con diversidad de árboles no lineales ",
@@ -716,16 +730,17 @@ const ProjectList: Project[] = [
     id: 12,
     name: "B9: Cubierta verde experimental",
     location: "E.T.S. Ingenieros Agrónomos - UCLM, 13004 - Ciudad Real",
-    latitude: 38.98689301742977,
-    longitude: -3.920097928176967,
+    latitude: 38.99747846501019,
+    longitude: -3.9194114536183946,
     cost: "51.823,20 €",
     state: "Finalizada",
-    year: "25/09/2025",
+    year_ejecucion: "Sin información",
+    year_finalizacion: "25/09/2025",
     squareMeters: "300 m²",
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. ",
+      "La Universidad de Castilla -La Mancha cuenta con un parque muy importante de edificios en sus campos de Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina. La eficiencia energética de estos edificios es muy importante en la reducción de consumos energéticos, siendo claves las medidas pasivas que mejoran el aislamiento térmico de los edificios. En este sentido, las cubiertas verdes son una interesante alternativa que además permite sustituir cubiertas planas “muertas” en espacios vivos. Pero más allá de instalar cubiertas verdes en sus edificios, al contar la UCLM con centros de investigación y docencia en Arquitectura e ingeniería agronómica, dispone de los medios humanos necesarios para realizar una investigación que permita evaluar diversas soluciones de cubiertas para explorar aquellas especies y soluciones que mejor se adapten al clima y circunstancias de los edificios de Castilla – La Mancha, de manera que los resultados sean transferibles a otros edificios de la UCLM y otros propietarios. Por este motivo, se plantea esta acción para apoyar la docencia y prácticas de los alumnos de la Escuela de Ingenieros Agrónomos en la línea de cultivo experimental sobre las cubiertas de aproximadamente 300 m2 de la propia Escuela de Ingenieros Agrónomos.",
     properties1: [
       "La Universidad de Castilla-La Mancha (UCLM) dispone de un amplio parque de edificios en: - Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina.",
       "La eficiencia energética de sus edificios es clave en la reducción del consumo energético",
