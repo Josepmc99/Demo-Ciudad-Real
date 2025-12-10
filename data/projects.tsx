@@ -501,7 +501,8 @@ const ProjectList: Project[] = [
   {
     id: 8,
     name: "B6: Acupuntura Verde en Barrios",
-    location: "Calle Murillo con Calle José de Ribera, 13004 - Ciudad Real",
+    location:
+      "Barrio Pío XII, Barrio San Antón y Ronda Sur, 13004 - Ciudad Real",
     latitude: 38.98157903355231,
     longitude: -3.9381351031288228,
     latitude1: 38.99220343003354,
@@ -585,7 +586,7 @@ const ProjectList: Project[] = [
   {
     id: 9,
     name: "B7.1: Recuperación del itinerario histórico 'Calatrava la Vieja' (UCLM)",
-    location: "Calle Altagrafcia, 50, 13004 - Ciudad Real",
+    location: "Campus universitario de UCLM, 13004 - Ciudad Real",
     latitude: 38.993762365355664,
     longitude: -3.9254365242706752,
     cost: "84.656,00 €",
