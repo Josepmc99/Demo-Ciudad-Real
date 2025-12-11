@@ -23,6 +23,34 @@ const ProjectDetail = ({ project }: { project: Project }) => {
     return "bg-slate-100 text-slate-700 border-slate-200";
   };
 
+  //Separar saltos de línea en la descripción
+  const descriptionBlocks = (project.description || "")
+    .split("<br>")
+    .map((t) => t.trim())
+    .filter(Boolean);
+
+  // Función para renderizar texto con enlaces clicables
+  function renderWithLinks(text: string) {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+    return text.split(urlRegex).map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline hover:text-blue-800"
+          >
+            {part}
+          </a>
+        );
+      }
+      return part;
+    });
+  }
+
   // Normalizar las properties que vienen en un solo string con guiones
   const normalizeProperties = (properties?: string[]) => {
     if (!properties || properties.length === 0) return [];
@@ -174,9 +202,11 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                     Descripción del proyecto
                   </h2>
                   <div className="rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100">
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed whitespace-pre-line text-justify">
-                      {project.description}
-                    </p>
+                    <div className="space-y-3 text-sm sm:text-base text-slate-700 text-justify">
+                      {descriptionBlocks.map((block, idx) => (
+                        <p key={idx}>{block}</p>
+                      ))}
+                    </div>
                   </div>
                 </section>
               )}
@@ -228,7 +258,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                                     size={14}
                                     className="mt-[3px] shrink-0 text-blue-500"
                                   />
-                                  <span>{property}</span>
+                                  <span>{renderWithLinks(property)}</span>
                                 </li>
                               ))}
                             </ul>
@@ -262,7 +292,7 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                                   size={14}
                                   className="mt-[3px] shrink-0 text-blue-500"
                                 />
-                                <span>{property}</span>
+                                <span>{renderWithLinks(property)}</span>
                               </li>
                             ))}
                           </ul>
