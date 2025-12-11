@@ -168,7 +168,8 @@ const ProjectList: Project[] = [
       Obispo8,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B1.-Revegetacion-de-Ejes-Verdes.pdf",
   },
   {
     id: 2,
@@ -230,7 +231,8 @@ const ProjectList: Project[] = [
     image: Gasset,
     additionalImages: [Gasset1, Gasset2, Gasset3, Gasset4, Gasset5],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B2.-Renaturalizacion-aparcamiento-Gasset.pdf",
   },
   {
     id: 3,
@@ -276,7 +278,8 @@ const ProjectList: Project[] = [
     image: Garrido,
     additionalImages: [Garrido, Garrido1, Garrido2, Garrido3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B3.1.-Creacion-de-un-eje-verde-en-la-Avenida-Jesus-Garrido.pdf",
   },
   {
     id: 4,
@@ -324,7 +327,8 @@ const ProjectList: Project[] = [
     image: Sotelo,
     additionalImages: [Sotelo1, Sotelo2, Sotelo3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B3.2-Eje-verde-con-pradera-sostenible-en-Leopoldo-Calvo-Sotelo.pdf",
   },
   {
     id: 5,
@@ -371,7 +375,8 @@ const ProjectList: Project[] = [
     image: PIA,
     additionalImages: [PIA, PIA1, PIA2, PIA3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B3.3-Corredor-verde-en-el-Poligono-Industrial-Avanzado-PIA.pdf",
   },
   {
     id: 6,
@@ -439,7 +444,8 @@ const ProjectList: Project[] = [
       Silos8,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B4-Renaturalizacion-del-espacio-de-los-silos-como-nodo-verde.pdf",
   },
   {
     id: 7,
@@ -496,7 +502,8 @@ const ProjectList: Project[] = [
     image: Espartero,
     additionalImages: [Espartero],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B5-Eje-verde-Dehesa-C.-General-Espartero.pdf",
   },
   {
     id: 8,
@@ -581,7 +588,8 @@ const ProjectList: Project[] = [
       Acupuntura6,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B6-Acupuntura-verde-en-barrios.pdf",
   },
   {
     id: 9,
@@ -642,7 +650,8 @@ const ProjectList: Project[] = [
     image: UCLM4,
     additionalImages: [UCLM2, UCLM3, UCLM4, UCLM5, UCLM6],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B7.1-Recuperacion-del-itinerario-historico-Calatrava-la-Vieja-como-eje-verde.pdf",
   },
   {
     id: 10,
@@ -683,7 +692,8 @@ const ProjectList: Project[] = [
     image: UCLM,
     additionalImages: [UCLM],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B7.3.-Regeneracion-de-la-vegetacion-del-Campus-UCLM.pdf",
   },
   {
     id: 11,
@@ -748,7 +758,8 @@ const ProjectList: Project[] = [
       Paseo7,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B8-Paseo-ecosistemico-en-el-Campus-exterior-y-tanque-de-tormentas-para-reciclado-de-aguas-pluviales-Sector-A.pdf",
   },
   {
     id: 12,
@@ -798,7 +809,8 @@ const ProjectList: Project[] = [
       Agronomos4,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
-    pdfUrl: "/",
+    pdfUrl:
+      "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B9-Cubierta-verde-experimental.pdf",
   },
 ];
 
