@@ -1,68 +1,85 @@
 import type { StaticImageData } from "next/image";
 
-import Gasset from "@/public/images/projects/Aparcamiento Gasset/Gasset_1.jpg";
-import Gasset1 from "@/public/images/projects/Aparcamiento Gasset/Gasset_1.jpg";
-import Gasset2 from "@/public/images/projects/Aparcamiento Gasset/Gasset_2.jpg";
-import Gasset3 from "@/public/images/projects/Aparcamiento Gasset/Gasset_3.jpg";
-import Gasset4 from "@/public/images/projects/Aparcamiento Gasset/Gasset_4.jpg";
-import Gasset5 from "@/public/images/projects/Aparcamiento Gasset/Gasset_5.jpg";
-import Garrido from "@/public/images/projects/Avenida Jesús Garrido/Garrido.jpg";
-import Garrido1 from "@/public/images/projects/Avenida Jesús Garrido/Garrido_1.jpg";
-import Garrido2 from "@/public/images/projects/Avenida Jesús Garrido/Garrido_2.jpg";
-import Garrido3 from "@/public/images/projects/Avenida Jesús Garrido/Garrido_3.jpg";
-import Obispo from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo.jpg";
-import Obispo1 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_1.jpg";
-import Obispo2 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_2.jpg";
-import Obispo3 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_3.jpg";
-import Obispo4 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_4.jpg";
-import Obispo5 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_5.jpg";
-import Obispo6 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_6.jpg";
-import Obispo7 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_7.jpg";
-import Obispo8 from "@/public/images/projects/Calle Obispo Rafael Torija/Obispo_8.jpg";
-import UCLM from "@/public/images/projects/Campus UCLM/UCLM.jpg";
-import UCLM2 from "@/public/images/projects/Campus UCLM/UCLM_2.jpg";
-import UCLM3 from "@/public/images/projects/Campus UCLM/UCLM_3.jpg";
-import UCLM4 from "@/public/images/projects/Campus UCLM/UCLM_4.jpg";
-import UCLM5 from "@/public/images/projects/Campus UCLM/UCLM_5.jpg";
-import UCLM6 from "@/public/images/projects/Campus UCLM/UCLM_6.jpg";
-import PIA from "@/public/images/projects/Corredor Verde PIA/PIA.jpg";
-import PIA1 from "@/public/images/projects/Corredor Verde PIA/PIA_1.jpg";
-import PIA2 from "@/public/images/projects/Corredor Verde PIA/PIA_2.jpg";
-import PIA3 from "@/public/images/projects/Corredor Verde PIA/PIA_3.jpg";
-import Agronomos from "@/public/images/projects/Cubierta verde Agrónomos/Agronomos.jpg";
-import Agronomos1 from "@/public/images/projects/Cubierta verde Agrónomos/Agronomos_1.jpg";
-import Agronomos2 from "@/public/images/projects/Cubierta verde Agrónomos/Agronomos_2.jpg";
-import Agronomos3 from "@/public/images/projects/Cubierta verde Agrónomos/Agronomos_3.jpg";
-import Agronomos4 from "@/public/images/projects/Cubierta verde Agrónomos/Agronomos_4.jpg";
-import Sotelo from "@/public/images/projects/Leopoldo Calvo Sotelo/Sotelo.jpg";
-import Sotelo1 from "@/public/images/projects/Leopoldo Calvo Sotelo/Sotelo_1.jpg";
-import Sotelo2 from "@/public/images/projects/Leopoldo Calvo Sotelo/Sotelo_2.jpg";
-import Sotelo3 from "@/public/images/projects/Leopoldo Calvo Sotelo/Sotelo_3.jpg";
-import Paseo from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo.jpg";
-import Paseo1 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_1.jpg";
-import Paseo2 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_2.jpg";
-import Paseo3 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_3.jpg";
-import Paseo4 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_4.jpg";
-import Paseo5 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_5.jpg";
-import Paseo6 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_6.jpg";
-import Paseo7 from "@/public/images/projects/Paseo Ecosistémico Campus exterior/Paseo_7.jpg";
-import Silos from "@/public/images/projects/Silos/Silos.jpg";
-import Silos1 from "@/public/images/projects/Silos/Silos_1.jpg";
-import Silos2 from "@/public/images/projects/Silos/Silos_2.jpg";
-import Silos3 from "@/public/images/projects/Silos/Silos_3.jpg";
-import Silos4 from "@/public/images/projects/Silos/Silos_4.jpg";
-import Silos5 from "@/public/images/projects/Silos/Silos_5.jpg";
-import Silos6 from "@/public/images/projects/Silos/Silos_6.jpg";
-import Silos7 from "@/public/images/projects/Silos/Silos_7.jpg";
-import Silos8 from "@/public/images/projects/Silos/Silos_8.jpg";
-import Espartero from "@/public/images/projects/General Espartero/Espartero.jpg";
-import Acupuntura from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura.jpg";
-import Acupuntura1 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_1.jpg";
-import Acupuntura2 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_2.jpg";
-import Acupuntura3 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_3.jpg";
-import Acupuntura4 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_4.jpg";
-import Acupuntura5 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_5.jpg";
-import Acupuntura6 from "@/public/images/projects/Acupuntura verde en barrios/Acupuntura_6.jpg";
+import Gasset from "@/public/images/projects/B2/Gasset_1.jpg";
+import Gasset1 from "@/public/images/projects/B2/Gasset_1.jpg";
+import Gasset2 from "@/public/images/projects/B2/Gasset_2.jpg";
+import Gasset3 from "@/public/images/projects/B2/Gasset_3.jpg";
+import Gasset4 from "@/public/images/projects/B2/Gasset_4.jpg";
+import Gasset5 from "@/public/images/projects/B2/Gasset_5.jpg";
+import Garrido from "@/public/images/projects/B3.1/Garrido.jpg";
+import Garrido2 from "@/public/images/projects/B3.1/Garrido_2.jpg";
+import Garrido3 from "@/public/images/projects/B3.1/Garrido_3.jpg";
+import Garrido4 from "@/public/images/projects/B3.1/Garrido_4.jpg";
+import Garrido5 from "@/public/images/projects/B3.1/Garrido_5.jpg";
+import EjesVerdes from "@/public/images/projects/B1/EjesVerdes.jpg";
+import EjesVerdes2 from "@/public/images/projects/B1/EjesVerdes_2.jpg";
+import EjesVerdes3 from "@/public/images/projects/B1/EjesVerdes_3.jpg";
+import EjesVerdes4 from "@/public/images/projects/B1/EjesVerdes_4.jpg";
+import Historico from "@/public/images/projects/B7.1/Historico.jpg";
+import Historico2 from "@/public/images/projects/B7.1/Historico_2.jpg";
+import Historico3 from "@/public/images/projects/B7.1/Historico_3.jpg";
+import Historico4 from "@/public/images/projects/B7.1/Historico_4.jpg";
+import Historico5 from "@/public/images/projects/B7.1/Historico_5.jpg";
+import Historico6 from "@/public/images/projects/B7.1/Historico_6.jpg";
+import Historico7 from "@/public/images/projects/B7.1/Historico_7.jpg";
+import Historico8 from "@/public/images/projects/B7.1/Historico_8.jpg";
+import Historico9 from "@/public/images/projects/B7.1/Historico_9.jpg";
+import Historico10 from "@/public/images/projects/B7.1/Historico_10.jpg";
+import Historico11 from "@/public/images/projects/B7.1/Historico_11.jpg";
+import Historico12 from "@/public/images/projects/B7.1/Historico_12.jpg";
+import Historico13 from "@/public/images/projects/B7.1/Historico_13.jpg";
+import UCLM from "@/public/images/projects/B7.3/UCLM.jpg";
+import UCLM2 from "@/public/images/projects/B7.3/UCLM_2.jpg";
+import UCLM3 from "@/public/images/projects/B7.3/UCLM_3.jpg";
+import UCLM4 from "@/public/images/projects/B7.3/UCLM_4.jpg";
+import UCLM5 from "@/public/images/projects/B7.3/UCLM_5.jpg";
+import PIA from "@/public/images/projects/B3.3/PIA.jpg";
+import PIA2 from "@/public/images/projects/B3.3/PIA_2.jpg";
+import PIA3 from "@/public/images/projects/B3.3/PIA_3.jpg";
+import PIA4 from "@/public/images/projects/B3.3/PIA_4.jpg";
+import PIA5 from "@/public/images/projects/B3.3/PIA_5.jpg";
+import Agronomos from "@/public/images/projects/B9/Agronomos.jpg";
+import Agronomos1 from "@/public/images/projects/B9/Agronomos_1.jpg";
+import Agronomos2 from "@/public/images/projects/B9/Agronomos_2.jpg";
+import Agronomos3 from "@/public/images/projects/B9/Agronomos_3.jpg";
+import Sotelo from "@/public/images/projects/B3.2/Sotelo.jpg";
+import Sotelo2 from "@/public/images/projects/B3.2/Sotelo_2.jpg";
+import Sotelo3 from "@/public/images/projects/B3.2/Sotelo_3.jpg";
+import Sotelo4 from "@/public/images/projects/B3.2/Sotelo_4.jpg";
+import Paseo from "@/public/images/projects/B8/Paseo.jpg";
+import Paseo2 from "@/public/images/projects/B8/Paseo_2.jpg";
+import Paseo3 from "@/public/images/projects/B8/Paseo_3.jpg";
+import Paseo4 from "@/public/images/projects/B8/Paseo_4.jpg";
+import Paseo5 from "@/public/images/projects/B8/Paseo_5.jpg";
+import Paseo6 from "@/public/images/projects/B8/Paseo_6.jpg";
+import Paseo7 from "@/public/images/projects/B8/Paseo_7.jpg";
+import Paseo8 from "@/public/images/projects/B8/Paseo_8.jpg";
+import Paseo9 from "@/public/images/projects/B8/Paseo_9.jpg";
+import Paseo10 from "@/public/images/projects/B8/Paseo_10.jpg";
+import Paseo11 from "@/public/images/projects/B8/Paseo_11.jpg";
+import Silos from "@/public/images/projects/B4/Silos.jpg";
+import Silos1 from "@/public/images/projects/B4/Silos_1.jpg";
+import Silos2 from "@/public/images/projects/B4/Silos_2.jpg";
+import Silos3 from "@/public/images/projects/B4/Silos_3.jpg";
+import Silos4 from "@/public/images/projects/B4/Silos_4.jpg";
+import Silos5 from "@/public/images/projects/B4/Silos_5.jpg";
+import Silos6 from "@/public/images/projects/B4/Silos_6.jpg";
+import Silos7 from "@/public/images/projects/B4/Silos_7.jpg";
+import Silos8 from "@/public/images/projects/B4/Silos_8.jpg";
+import Espartero from "@/public/images/projects/B5/Espartero.jpg";
+import Espartero2 from "@/public/images/projects/B5/Espartero_2.jpg";
+import Espartero3 from "@/public/images/projects/B5/Espartero_3.jpg";
+import Espartero4 from "@/public/images/projects/B5/Espartero_4.jpg";
+import Espartero5 from "@/public/images/projects/B5/Espartero_5.jpg";
+import Espartero6 from "@/public/images/projects/B5/Espartero_6.jpg";
+import Espartero7 from "@/public/images/projects/B5/Espartero_7.jpg";
+import Acupuntura from "@/public/images/projects/B6/Acupuntura.jpg";
+import Acupuntura1 from "@/public/images/projects/B6/Acupuntura_1.jpg";
+import Acupuntura2 from "@/public/images/projects/B6/Acupuntura_2.jpg";
+import Acupuntura3 from "@/public/images/projects/B6/Acupuntura_3.jpg";
+import Acupuntura4 from "@/public/images/projects/B6/Acupuntura_4.jpg";
+import Acupuntura5 from "@/public/images/projects/B6/Acupuntura_5.jpg";
+import Acupuntura6 from "@/public/images/projects/B6/Acupuntura_6.jpg";
 
 export interface Project {
   id: number;
@@ -153,18 +170,8 @@ const ProjectList: Project[] = [
       "Mantenimiento y cuidados",
       "Señalización informativa",
     ],
-    image: Obispo,
-    additionalImages: [
-      Obispo,
-      Obispo1,
-      Obispo2,
-      Obispo3,
-      Obispo4,
-      Obispo5,
-      Obispo6,
-      Obispo7,
-      Obispo8,
-    ],
+    image: EjesVerdes,
+    additionalImages: [EjesVerdes, EjesVerdes2, EjesVerdes3, EjesVerdes4],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B1.-Revegetacion-de-Ejes-Verdes.pdf",
@@ -274,7 +281,7 @@ const ProjectList: Project[] = [
       "Poste de fauna (6 m de altura)",
     ],
     image: Garrido,
-    additionalImages: [Garrido, Garrido1, Garrido2, Garrido3],
+    additionalImages: [Garrido, Garrido2, Garrido3, Garrido4, Garrido5],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B3.1.-Creacion-de-un-eje-verde-en-la-Avenida-Jesus-Garrido.pdf",
@@ -323,7 +330,7 @@ const ProjectList: Project[] = [
       "Integración con el Geoparque Volcanes de Calatrava",
     ],
     image: Sotelo,
-    additionalImages: [Sotelo1, Sotelo2, Sotelo3],
+    additionalImages: [Sotelo2, Sotelo3, Sotelo4],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B3.2-Eje-verde-con-pradera-sostenible-en-Leopoldo-Calvo-Sotelo.pdf",
@@ -371,7 +378,7 @@ const ProjectList: Project[] = [
       "Conectividad y accesos",
     ],
     image: PIA,
-    additionalImages: [PIA, PIA1, PIA2, PIA3],
+    additionalImages: [PIA, PIA2, PIA3, PIA4, PIA5],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B3.3-Corredor-verde-en-el-Poligono-Industrial-Avanzado-PIA.pdf",
@@ -498,7 +505,15 @@ const ProjectList: Project[] = [
       "Riego y mantenimiento",
     ],
     image: Espartero,
-    additionalImages: [Espartero],
+    additionalImages: [
+      Espartero,
+      Espartero2,
+      Espartero3,
+      Espartero4,
+      Espartero5,
+      Espartero6,
+      Espartero7,
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B5-Eje-verde-Dehesa-C.-General-Espartero.pdf",
@@ -645,8 +660,22 @@ const ProjectList: Project[] = [
       "Señalización y divulgación",
       "Conexión urbana",
     ],
-    image: UCLM4,
-    additionalImages: [UCLM2, UCLM3, UCLM4, UCLM5, UCLM6],
+    image: Historico,
+    additionalImages: [
+      Historico,
+      Historico2,
+      Historico3,
+      Historico4,
+      Historico5,
+      Historico6,
+      Historico7,
+      Historico8,
+      Historico9,
+      Historico10,
+      Historico11,
+      Historico12,
+      Historico13,
+    ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B7.1-Recuperacion-del-itinerario-historico-Calatrava-la-Vieja-como-eje-verde.pdf",
@@ -688,7 +717,7 @@ const ProjectList: Project[] = [
       "Riego y colaboración",
     ],
     image: UCLM,
-    additionalImages: [UCLM],
+    additionalImages: [UCLM, UCLM2, UCLM3, UCLM4, UCLM5],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B7.3.-Regeneracion-de-la-vegetacion-del-Campus-UCLM.pdf",
@@ -744,16 +773,19 @@ const ProjectList: Project[] = [
       "Mejora del suelo",
       "Vegetación y biodiversidad",
     ],
-    image: Paseo,
+    image: Paseo4,
     additionalImages: [
-      Paseo,
-      Paseo1,
-      Paseo2,
-      Paseo3,
       Paseo4,
+      Paseo2,
+      Paseo,
+      Paseo3,
       Paseo5,
       Paseo6,
       Paseo7,
+      Paseo8,
+      Paseo9,
+      Paseo10,
+      Paseo11,
     ],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
@@ -763,8 +795,8 @@ const ProjectList: Project[] = [
     id: 12,
     name: "B9: Cubierta verde experimental",
     location: "E.T.S. Ingenieros Agrónomos - UCLM, 13004 - Ciudad Real",
-    latitude: 38.986797977293435,
-    longitude: -3.920329434677243,
+    latitude: 38.98689,
+    longitude: -3.92011,
     cost: "51.823,20 €",
     state: "Finalizada",
     year_ejecucion: "-",
@@ -799,13 +831,7 @@ const ProjectList: Project[] = [
       "Proyecto experimental",
     ],
     image: Agronomos,
-    additionalImages: [
-      Agronomos,
-      Agronomos1,
-      Agronomos2,
-      Agronomos3,
-      Agronomos4,
-    ],
+    additionalImages: [Agronomos, Agronomos1, Agronomos2, Agronomos3],
     mapCoordinates: { latitude: 38.85, longitude: -77.0369 },
     pdfUrl:
       "https://crater-ciudadreal.com/wp-content/uploads/2025/12/B9-Cubierta-verde-experimental.pdf",
