@@ -10,6 +10,7 @@ import {
   FileText,
 } from "lucide-react";
 import { Project } from "@/data/projects";
+import SpeciesTable from "@/components/ui/SpeciesTable";
 
 const ProjectDetail = ({ project }: { project: Project }) => {
   // Colores para el estado
@@ -66,6 +67,22 @@ const ProjectDetail = ({ project }: { project: Project }) => {
   const isAcupuntura =
     project.id === 8 || project.name === "B6: Acupuntura Verde en Barrios";
 
+  // Helpers tablas (decláralos ANTES de usarlos)
+  const hasTable = (t?: any[]) => Array.isArray(t) && t.length > 0;
+
+  const isArboladoTitle = (title: string) =>
+    title.trim().toLowerCase() ===
+    "especies y unidades aproximadas de arbolado";
+
+  const isArbustosTitle = (title: string) =>
+    title.trim().toLowerCase() ===
+    "especies y unidades aproximadas de arbustos";
+
+  const hasAnyTable = (p: Project) => hasTable(p.table1) || hasTable(p.table2);
+
+  const isEspeciesFeature = (title: string) =>
+    isArboladoTitle(title) || isArbustosTitle(title);
+
   // ----- LÓGICA GENERAL (para todos excepto B6) -----
   let featureGroups: { title: string; properties: string[] }[] = [];
 
@@ -80,10 +97,15 @@ const ProjectDetail = ({ project }: { project: Project }) => {
           properties: normalizeProperties(rawProps),
         };
       })
-      .filter(
-        (group) =>
-          group.title && group.properties && group.properties.length > 0
-      );
+      .filter((group) => {
+        // ✅ Mantener el grupo si tiene properties…
+        if (group.properties?.length) return true;
+
+        // ✅ …o si es “Especies…” y existen tablas
+        if (isEspeciesFeature(group.title) && hasAnyTable(project)) return true;
+
+        return false;
+      });
   }
 
   // ----- CASO ESPECIAL B6: ACUPUNTURA VERDE -----
@@ -96,19 +118,19 @@ const ProjectDetail = ({ project }: { project: Project }) => {
         {
           title: project.actuacion1,
           properties: [
+            ...normalizeProperties(project.properties2),
             ...normalizeProperties(project.properties3),
-            ...normalizeProperties(project.properties4),
           ],
         },
         {
           title: project.actuacion2,
-          properties: [...normalizeProperties(project.properties5)],
+          properties: [...normalizeProperties(project.properties4)],
         },
         {
           title: project.actuacion3,
           properties: [
-            ...normalizeProperties(project.properties7),
-            ...normalizeProperties(project.properties8),
+            ...normalizeProperties(project.properties5),
+            ...normalizeProperties(project.properties6),
           ],
         },
       ].filter((g) => g.title && g.properties && g.properties.length > 0) as {
@@ -139,6 +161,36 @@ const ProjectDetail = ({ project }: { project: Project }) => {
   const goToNext = () => {
     if (!totalImages) return;
     setCurrentIndex((prev) => Math.min(prev + 1, totalImages - 1));
+  };
+
+  // Convierte "Texto: -a -b" en { main: "Texto:", sub: ["a", "b"] }
+  const splitProperty = (raw: string) => {
+    const text = raw.trim();
+
+    // Si no hay guión, todo es main
+    if (!text.includes("-")) return { main: text, sub: [] as string[] };
+
+    // Separar por "-", limpiando espacios, y quitando posibles bullets vacíos
+    const chunks = text
+      .split("-")
+      .map((c) => c.trim())
+      .filter(Boolean);
+
+    // Si empieza por "-", no hay main
+    if (text.startsWith("-")) {
+      return {
+        main: "",
+        sub: chunks.map((s) => s.replace(/^\-+/, "").trim()).filter(Boolean),
+      };
+    }
+
+    // Si no empieza por "-", el primer chunk es main
+    const main = chunks.shift() ?? "";
+
+    return {
+      main,
+      sub: chunks.map((s) => s.replace(/^\-+/, "").trim()).filter(Boolean),
+    };
   };
 
   return (
@@ -242,26 +294,96 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                         Actuaciones del proyecto
                       </h2>
 
-                      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
+                      <div className="flex flex-col gap-4">
                         {actuacionesAcupuntura.map((group, idx) => (
                           <div
                             key={idx}
                             className="flex flex-col rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100"
                           >
                             <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-500">
-                              {group.title}
+                              {idx + 1}. {group.title}
                             </h3>
-                            <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-700">
-                              {group.properties.map((property, i) => (
-                                <li key={i} className="flex items-start gap-2">
-                                  <CheckCircle2
-                                    size={14}
-                                    className="mt-[3px] shrink-0 text-blue-500"
-                                  />
-                                  <span>{renderWithLinks(property)}</span>
-                                </li>
-                              ))}
+
+                            <ul className="space-y-2 pt-3 text-xs sm:text-sm text-slate-700">
+                              {group.properties.map((property, i) => {
+                                const { main, sub } = splitProperty(property);
+
+                                return (
+                                  <li
+                                    key={i}
+                                    className="text-xs sm:text-sm text-slate-700"
+                                  >
+                                    <div className="flex flex-col">
+                                      {/* MAIN con icono */}
+                                      {main && (
+                                        <div className="flex items-start gap-2">
+                                          <CheckCircle2
+                                            size={14}
+                                            className="mt-[3px] shrink-0 text-blue-500"
+                                          />
+                                          <span>{renderWithLinks(main)}</span>
+                                        </div>
+                                      )}
+
+                                      {/* SUB en filas separadas, sin icono, con margen */}
+                                      {sub.length > 0 && (
+                                        <div className="mt-1 ml-10 flex flex-col gap-1">
+                                          {sub.map((s, j) => (
+                                            <div key={j}>
+                                              {renderWithLinks(s)}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  </li>
+                                );
+                              })}
                             </ul>
+
+                            {/* TABLAS B6 */}
+                            {isAcupuntura && (
+                              <>
+                                {idx === 0 && (
+                                  <>
+                                    <SpeciesTable
+                                      title="Arbolado"
+                                      table={project.table1}
+                                    />
+                                    <SpeciesTable
+                                      title="Arbustivas"
+                                      table={project.table2}
+                                    />
+                                  </>
+                                )}
+
+                                {idx === 1 && (
+                                  <>
+                                    <SpeciesTable
+                                      title="Arbolado "
+                                      table={project.table3}
+                                    />
+                                    <SpeciesTable
+                                      title="Arbustivas"
+                                      table={project.table4}
+                                    />
+                                  </>
+                                )}
+
+                                {idx === 2 && (
+                                  <>
+                                    <SpeciesTable
+                                      title="Arbolado"
+                                      table={project.table5}
+                                    />
+                                    <SpeciesTable
+                                      title="Arbustivas"
+                                      table={project.table6}
+                                    />
+                                  </>
+                                )}
+                              </>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -275,29 +397,77 @@ const ProjectDetail = ({ project }: { project: Project }) => {
                     <h2 className="text-lg sm:text-xl font-semibold text-slate-900 mb-3 sm:mb-4">
                       Características del proyecto
                     </h2>
+                    {/* AHORA: filas */}
+                    <div className="flex flex-col gap-4">
+                      {featureGroups.map((group, idx) => {
+                        const showArboladoTable =
+                          isArboladoTitle(group.title) &&
+                          hasTable(project.table1);
+                        const showArbustosTable =
+                          isArbustosTitle(group.title) &&
+                          hasTable(project.table2);
 
-                    <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2">
-                      {featureGroups.map((group, idx) => (
-                        <div
-                          key={idx}
-                          className="flex flex-col rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100"
-                        >
-                          <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-500">
-                            {idx + 1}. {group.title}
-                          </h3>
-                          <ul className="mt-3 space-y-2 text-xs sm:text-sm text-slate-700">
-                            {group.properties.map((property, i) => (
-                              <li key={i} className="flex items-start gap-2">
-                                <CheckCircle2
-                                  size={14}
-                                  className="mt-[3px] shrink-0 text-blue-500"
-                                />
-                                <span>{renderWithLinks(property)}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
+                        return (
+                          <div
+                            key={idx}
+                            className="flex flex-col gap-1 rounded-2xl bg-white p-4 sm:p-5 shadow-sm ring-1 ring-slate-100"
+                          >
+                            <h3 className="text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-500">
+                              {idx + 1}. {group.title}
+                            </h3>
+
+                            <ul className="space-y-2 pt-3 text-xs sm:text-sm text-slate-700">
+                              {group.properties.map((property, i) => {
+                                const { main, sub } = splitProperty(property);
+
+                                return (
+                                  <li
+                                    key={i}
+                                    className="text-xs sm:text-sm text-slate-700"
+                                  >
+                                    <div className="flex flex-col">
+                                      {/* MAIN con icono */}
+                                      {main && (
+                                        <div className="flex items-start gap-2">
+                                          <CheckCircle2
+                                            size={14}
+                                            className="mt-[3px] shrink-0 text-blue-500"
+                                          />
+                                          <span>{renderWithLinks(main)}</span>
+                                        </div>
+                                      )}
+
+                                      {/* SUB en filas separadas, sin icono, con margen */}
+                                      {sub.length > 0 && (
+                                        <div className="mt-1 ml-10 flex flex-col gap-1">
+                                          {sub.map((s, j) => (
+                                            <div key={j}>
+                                              {renderWithLinks(s)}
+                                            </div>
+                                          ))}
+                                        </div>
+                                      )}
+                                    </div>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+
+                            {/* Inserción de tablas SOLO en estas features */}
+                            {(showArboladoTable || showArbustosTable) && (
+                              <div className="h-px bg-slate-100" />
+                            )}
+
+                            {showArboladoTable && (
+                              <SpeciesTable table={project.table1} />
+                            )}
+
+                            {showArbustosTable && (
+                              <SpeciesTable table={project.table2} />
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   </section>
                 )

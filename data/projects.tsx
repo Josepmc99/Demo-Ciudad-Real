@@ -110,6 +110,12 @@ export interface Project {
   actuacion1?: string;
   actuacion2?: string;
   actuacion3?: string;
+  table1?: { titulo?: string; especies: string[]; unidades: number[] }[];
+  table2?: { titulo?: string; especies: string[]; unidades: number[] }[];
+  table3?: { titulo?: string; especies: string[]; unidades: number[] }[];
+  table4?: { titulo?: string; especies: string[]; unidades: number[] }[];
+  table5?: { titulo?: string; especies: string[]; unidades: number[] }[];
+  table6?: { titulo?: string; especies: string[]; unidades: number[] }[];
   image: string | StaticImageData;
   additionalImages: (string | StaticImageData)[];
   mapCoordinates: { latitude: number; longitude: number };
@@ -150,8 +156,6 @@ const ProjectList: Project[] = [
       "Lentisco (Pistacia lentiscus)",
       "Chaparro (Quercus coccifera)",
       "Retama amarilla (Retama sphaerocarpa)",
-      "Refugio y alimento para aves e insectos",
-      "Mejora del equilibrio ecológico y paisajístico",
     ],
     properties4: [
       "Riegos de apoyo con camión cisterna (primer verano)",
@@ -161,7 +165,7 @@ const ProjectList: Project[] = [
     properties5: [
       "Carteles descriptivos con logos de entidades participantes",
       "Mapa y resumen del proyecto",
-      "Códigos QR para información digital -Inspirado en las rutas del Monte de la Atalaya -https://turismo.ciudadreal.es/project/senderismo",
+      "Códigos QR para información digital (Inspirado en las rutas del Monte de la Atalaya)",
     ],
     features: [
       "Plantaciones verdes a lo largo de los caminos",
@@ -253,7 +257,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "En la avenida de Jesús Garrido existe un área calificada como zona verde de 10.880 m2 que estaba todavía sin ejecutar con una parcela en desuso y carente de cubierta vegetal. En esta zona de la ciudad está aumentado con la construcción de viviendas y la ciudadanía reclama zonas verdes próximas a sus viviendas y espacios para el paseo y el ocio. Este hecho se une a que esta zona verde forma parte de un anillo concéntrico y que con su renaturalización se conectaría el parque de Juan Pablo II con el pinar Isabel de Castilla (y la vía verde que sale de la ciudad por el sur). Esta zona cubriría las necesidades de esparcimiento en zonas verdes en verano, una necesidad creciente por la climatología de la zona, que provoca veranos con temperaturas sostenidas por encima de los 35ºC.",
+      "En la avenida de Jesús Garrido existe un área calificada como zona verde de 10.880 m2 que estaba todavía sin ejecutar con una parcela en desuso y carente de cubierta vegetal. En esta zona de la ciudad está aumentado con la construcción de viviendas y la ciudadanía reclama zonas verdes próximas a sus viviendas y espacios para el paseo y el ocio. Este hecho se une a que esta zona verde forma parte de un anillo concéntrico y que con su renaturalización se conectaría el parque de Juan Pablo II con el pinar Isabel de Castilla (y la vía verde que sale de la ciudad por el sur). Esta zona cubriría las necesidades de esparcimiento en zonas verdes en verano, una necesidad creciente por la climatología de la zona, que provoca veranos con temperaturas sostenidas por encima de los 35ºC. ",
     properties1: [
       "Selección de especies autóctonas de bajo consumo hídrico",
       "Supresión de tratamientos fitosanitarios",
@@ -264,21 +268,61 @@ const ProjectList: Project[] = [
     ],
     properties2: [
       "Sistema de goteo para arbolado y arbustos",
-      "Agua procedente de la red municipal",
+      "Agua procedente de la red",
       "Duración mínima para garantizar el arraigo de especies",
-      "Desmontaje de la red secundaria una vez alcanzado el arraigo -Objetivo: eficiencia hídrica y mantenimiento responsable",
+      "Desmontaje de la red secundaria una vez alcanzado el arraigo con el objetivo de conseguir una eficiencia hídrica y mantenimiento responsable",
     ],
     properties3: [
-      "Creación de refugios naturales para fauna auxiliar: -Majanos de piedra -Pilas de madera (Refugios para insectos, reptiles y pequeños mamíferos)",
+      "Generación de refugios para insectos y pequeños reptiles y mamíferos, a base de majanos de piedra y pilas de madera.",
+      "Diseñado para albergar cuatro especies emblemáticas: -Avión → base adaptada para construcción de nidos (listones + malla metálica) -Vencejo → tres nidales por cara del cuadrado estructural -Autillo → dos nidales laterales para esta pequeña rapaz nocturna -Murciélagos → nidales adheridos al propio poste.",
     ],
-    properties4: [
-      "Diseñado para albergar cuatro especies emblemáticas: -Avión → base adaptada para construcción de nidos (listones + malla metálica) -Vencejo → tres nidales por cara del cuadrado estructural -Autillo → dos nidales laterales para esta pequeña rapaz nocturna -Murciélagos → nidales adheridos al propio poste -Estructura orientada a favorecer la presencia de aves urbanas y control biológico de insectos",
+    table1: [
+      {
+        especies: [
+          "Celtis australis",
+          "Punus pinero",
+          "Pyrus colleryana",
+          "Cercis siliquastrum",
+          "Ulmus minor",
+          "Eleagnus angustifolia",
+          "Fraxinus angustifolia",
+          "Juniperus oxycedrus",
+          "Cupressus sempervirens",
+          "Quercus ilex",
+          "Ceratonia siliqua",
+          "Quercus robur",
+          "Tilia tomentosa",
+        ],
+        unidades: [40, 30, 30, 25, 15, 15, 15, 15, 15, 10, 5, 5],
+      },
+    ],
+    table2: [
+      {
+        especies: [
+          "Cistus albidus",
+          "Lavandula angustifolia",
+          "Pistacia lentiscus",
+          "Rosmarinus officinalis",
+          "Acanthus mollis",
+          "Myrtus communis",
+          "Phlomix fruticosa",
+          "Tomarix gallica",
+          "Thimus vulgaris",
+          "Eleagnus pungens",
+          "Arbutus unedo",
+          "Juniperus oxycedrus",
+          "Punica granatum",
+          "Vibumum tinus",
+        ],
+        unidades: [100, 100, 100, 100, 50, 50, 50, 50, 50, 30, 20, 20, 20, 20],
+      },
     ],
     features: [
       "Jardinería sostenible",
       "Infraestructura de riego",
       "Fomento de la biodiversidad",
-      "Poste de fauna (6 m de altura)",
+      "Especies y unidades aproximadas de arbolado",
+      "Especies y unidades aproximadas de arbustos",
     ],
     image: Garrido,
     additionalImages: [Garrido, Garrido2, Garrido3, Garrido4, Garrido5],
@@ -300,7 +344,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "En toda la longitud de la avenida Leopoldo Calvo Sotelo hay un área lineal paralela calificada como zona verde de 20.300 m2 que estaba todavía sin ejecutar. El área a renaturalizar conectará al norte con el nodo verde de los Silos (acción B4) y la pradera florida sostenible en ejecución de carretera de Valdepeñas, y al sur con la Segunda Ronda, que lleva pradera sostenible arbolada en el proyecto. La acción quiere convertir esta zona actualmente en desuso, en un parque-paseo arbolado que sea utilizado como vía verde para el paseo y el esparcimiento y sirva de eje de conexión verde dentro de la ciudad. ",
+      "En toda la longitud de la avenida Leopoldo Calvo Sotelo hay un área lineal paralela calificada como zona verde de 20.300 m2 que estaba todavía sin ejecutar. El área a renaturalizar conectará al norte con el nodo verde de los Silos (acción B4) y la pradera florida sostenible en ejecución de carretera de Valdepeñas, y al sur con la Segunda Ronda, que lleva pradera sostenible arbolada en el proyecto. La acción quiere convertir esta zona actualmente en desuso, en un parque-paseo arbolado que sea utilizado como vía verde para el paseo y el esparcimiento y sirva de eje de conexión verde dentro de la ciudad. <br> La zona verde se diseñará a modo de corredor arbolado de planta autóctona. <br> Se renaturalizarán dos pequeñas praderas existente. Se suspenderán los riegos y siegas periódicas para que completen sus ciclos naturales con normalidad y se produzca la resiembra natural. <br> El área contará con un paseo peatonal y carril bici centrales y paseos que conectan a lo largo de toda la avenida.",
     properties1: [
       "Crecimiento libre entre otoño y primavera",
       "Fomento de floración y resiembra natural",
@@ -320,14 +364,65 @@ const ProjectList: Project[] = [
     properties4: [
       "Subacción específica dentro del proyecto del Geoparque",
       "Cata visitable de sismitas como punto de interés geológico",
-      "Incorporación a las rutas de los volcane",
+      "Incorporación a las rutas de los volcanes",
       "Potenciación del área como espacio de esparcimiento y educación ambiental",
+    ],
+    table1: [
+      {
+        especies: [
+          "Celtis australis",
+          "Cercis silliqua",
+          "Ulmus minor",
+          "Pinus pinea",
+          "Quercus ilex",
+          "Gleditsia triacanthus inermis",
+          "Eleagnus angustifolia",
+          "Compressus sempervirens stricta",
+          "Malus floribunda",
+          "Tilia tomentosa",
+          "Acer pseudoplatanus",
+          "Laurus nobilis",
+          "Taxus baccata",
+          "Ceratonia silliqua",
+          "Quercus robur",
+          "Ficus carica",
+          "Prunus dulcis",
+          "Quercus suber",
+        ],
+        unidades: [
+          83, 54, 42, 40, 40, 37, 30, 27, 20, 17, 12, 11, 10, 9, 9, 8, 6, 6,
+        ],
+      },
+    ],
+    table2: [
+      {
+        especies: [
+          "Rosmarinus officinalis",
+          "Quercus coccifera",
+          "Cistus albidus",
+          "Lavandula stoeachas",
+          "Phyllirea angustifolia",
+          "Pistacia terebinthus",
+          "Pistacia terebinthys",
+          "Temarix gallica",
+          "Arbutus unedo",
+          "Laurus nobilis",
+          "Cistus ladanifer",
+          "Spartium junceum",
+          "Taxus bacatta",
+        ],
+        unidades: [
+          693, 416, 347, 347, 277, 277, 277, 277, 208, 173, 69, 69, 35,
+        ],
+      },
     ],
     features: [
       "Gestión de praderas sostenibles",
       "Función ambiental y acústica",
       "Red de riego localizado",
       "Integración con el Geoparque Volcanes de Calatrava",
+      "Especies y unidades aproximadas de arbolado",
+      "Especies y unidades aproximadas de arbustos",
     ],
     image: Sotelo,
     additionalImages: [Sotelo2, Sotelo3, Sotelo4],
@@ -349,16 +444,14 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "Esta es una acción diseñada para dar continuidad y establecer una conexión verde entre una zona periurbana (polígono industrial) y la zona urbana, separada por una infraestructura ferroviaria como es la vía del AVE. Se trata de realizar un ajardinamiento de bajo mantenimiento en 14.079 m2 de zonas verdes sin ejecutar en el Polígono industrial Avanzado (PIA) de forma similar al que se ha ejecutado en otros viales del PIA para darle continuidad al ya existente y conexionar la zona con el ámbito.",
+      "Esta es una acción diseñada para dar continuidad y establecer una conexión verde entre una zona periurbana (polígono industrial) y la zona urbana, separada por una infraestructura ferroviaria como es la vía del AVE. Se trata de realizar un ajardinamiento de bajo mantenimiento en 14.079 m2 de zonas verdes sin ejecutar en el Polígono industrial Avanzado (PIA) de forma similar al que se ha ejecutado en otros viales del PIA para darle continuidad al ya existente.",
     properties1: [
-      "Arbolado de sombra combinado con especies autóctonas",
-      "Parterres de aromáticas: lavandas, tomillo y romero",
+      "Plantaciones de arbolado de sombra intercalados con arbolado autóctono y parterres de aromáticas (lavandas, tomillo y romero).",
       "Incorporación de arbustos y tapizantes de baja demanda hídrica",
       "Cobertura vegetal diversa que mejora el confort térmico y visual",
     ],
     properties2: [
-      "Uso de materiales orgánicos en parterres",
-      "Picadura de poda reciclada procedente del Servicio Municipal de Parques y Jardines",
+      "Uso de materiales orgánicos en parterres: Picadura de poda reciclada procedente del Servicio Municipal de Parques y Jardines",
       "Ejemplo de economía circular y aprovechamiento de recursos locales",
     ],
     properties3: [
@@ -376,6 +469,39 @@ const ProjectList: Project[] = [
       "Materiales sostenibles",
       "Integración paisajística e industrial",
       "Conectividad y accesos",
+      "Especies y unidades aproximadas de arbolado",
+      "Especies y unidades aproximadas de arbustos",
+    ],
+    table1: [
+      {
+        especies: [
+          "Celtis australis",
+          "Fraxinus angustifolia",
+          "Cupressus sempervirens",
+          "Quercus ilex",
+          "Ceratonia siliqua",
+          "Olea europaea",
+        ],
+        unidades: [60, 60, 40, 20, 10, 10],
+      },
+    ],
+    table2: [
+      {
+        especies: [
+          "Cistus albidus",
+          "Genista hispanica",
+          "Lavandula angustifolia",
+          "Rosmarinus officinalis",
+          "Salvia officinalis",
+          "Thimus vulgaris",
+          "Arbutus unedo",
+          "Juniperus oxycedrus",
+          "Myrtus communis",
+          "Pistacia terebinthus",
+          "Tamarix gallica",
+        ],
+        unidades: [100, 100, 100, 100, 100, 100, 20, 20, 20, 20, 20],
+      },
     ],
     image: PIA,
     additionalImages: [PIA, PIA2, PIA3, PIA4, PIA5],
@@ -545,28 +671,26 @@ const ProjectList: Project[] = [
       "Modelo de acciones a pequeña escala (SSA – Small Scale Actions)",
       "Estrategia: probar, evaluar y escalar soluciones sostenibles ya testadas",
     ],
-    properties3: [
+    properties2: [
       "Actuación piloto en dos pequeñas zonas del barrio",
       "Superficie total: 697 m",
       "Ámbitos de intervención: -Zona de acerado público -Zona entre bloques de viviendas con red de riego para arbolado",
     ],
-    properties4: [
+    properties3: [
       "Dos parterres arbolados en forma de “L” en la esquina de calle Murillo y calle José de Ribera",
-      "Espacio estancial vecinal para reunión y descanso",
+      "Zona para reunión y descansode los vecinos",
       "Vegetación de bajo consumo hídrico en los parterres",
       "Ampliación y vegetación de alcorques existentes (250 × 150 cm)",
       "Parterres enrasados con pavimento para facilitar recogida de agua",
-      "Plantación de 25 unidades de arbolado",
-      "Incorporación de arbustos autóctonos (baja demanda hídrica)",
     ],
-    properties5: [
+    properties4: [
       "Refuerzo del arbolado de sombra en la Plaza Gloria Fuertes",
       "Arbolado de gran porte para mejorar el confort térmico y la habitabilidad",
       "Sombra sobre fachadas de viviendas cercanas para reducir temperatura interior",
       "Vegetación autóctona en parterres del interior del barrio",
       "Naturalización progresiva de espacios urbanos con especies resistentes y de bajo mantenimiento",
     ],
-    properties7: [
+    properties5: [
       "Actuación en solar municipal entre calles Alonso de Estrada y Fernando Alonso de Coca",
       "Espacio actualmente sin resolver, calificado como zona verde",
       "Objetivo: crear un eje arbolado que conecte los corredores de la Ronda Sur y la Vía Verde",
@@ -574,7 +698,7 @@ const ProjectList: Project[] = [
       "Paseo central con firme de arena natural",
       "Parterres resueltos con cobertura orgánica (materiales naturales y sostenibles)",
     ],
-    properties8: [
+    properties6: [
       "Prototipos urbanos verdes de fácil replicación",
       "Reverdecimiento ciudadano participativo",
       "Mejora de la calidad ambiental y social de los barrios",
@@ -591,6 +715,105 @@ const ProjectList: Project[] = [
     actuacion1: "Urbanismo táctico verde – Barrio Pío XII",
     actuacion2: "Urbanismo táctico verde – Barrio San Antón",
     actuacion3: "Eje arbolado de conexión Ronda Sur – Vía Verde",
+    table1: [
+      {
+        titulo: "Plantación de 25 unidades de arbolado:",
+        especies: [
+          "Pirus australis",
+          "Morus alba fruitless",
+          "Celtis australis",
+          "Koelreuteria paniculata",
+        ],
+        unidades: [14, 7, 2, 2],
+      },
+    ],
+    table2: [
+      {
+        titulo: "Incorporación de arbustos autóctonos (baja demanda hídrica): ",
+        especies: [
+          "Cistus olbidus",
+          "Rosmarinus officinalis",
+          "Salvia officinalis",
+          "Lavandula stoechas",
+          "Santolina chamaecyparis",
+        ],
+        unidades: [60, 60, 40, 30, 10],
+      },
+    ],
+    table3: [
+      {
+        especies: [
+          "Cistus albidus",
+          "Lavandula stoeachas",
+          "Rosmarinus officinalis",
+          "Phyllirea angustifolia",
+          "Salvia officinalis",
+          "Arbutus unedo",
+          "Cistus ladanifer",
+          "Erica arborea",
+          "Myrtus comunis",
+          "Pistacia terebinthus",
+          "Teucrium fruticans",
+          "Acanthus mollis",
+          "Phlomis fruticosa",
+        ],
+        unidades: [51, 51, 51, 34, 34, 17, 17, 17, 17, 17, 17, 10, 7],
+      },
+    ],
+    table4: [
+      {
+        especies: [
+          "Celtis australis",
+          "Pyrus calleryana",
+          "Koelreuteria paniculata",
+          "Quercus ilex",
+        ],
+        unidades: [32, 24, 4, 1],
+      },
+    ],
+    table5: [
+      {
+        especies: [
+          "Partenocissus tricuspidata",
+          "Rosmarinus officinalis",
+          "Cistus albidus",
+          "Lavandula stoechas",
+          "Salvia officinalis",
+          "Tamarix gallica",
+          "Myrtus comunis",
+          "Phyllirea angustifolia",
+          "Pistacia terebinthus",
+          "Quercus coccifera",
+          "Arbutus unedo",
+          "Cistus ladanifer",
+          "Pistacia lentiscus",
+          "Juniperus oxycedrus",
+          "Spartium junceum",
+          "Laurus nobilis",
+        ],
+        unidades: [
+          200, 186, 139, 93, 93, 74, 46, 46, 46, 46, 37, 37, 37, 19, 19, 9,
+        ],
+      },
+    ],
+    table6: [
+      {
+        especies: [
+          "Cupressus sempervirens stricta",
+          "Quercus ilex",
+          "Celtis australis",
+          "Morus alba fruitless",
+          "Cercis siliquastrum",
+          "Gleditsia triacanthos inermis",
+          "Koelreuteria paniculata",
+          "Ceratonia silliqua",
+          "Ficus carica",
+          "Ziziphus jujuba",
+        ],
+        unidades: [44, 37, 31, 29, 18, 18, 17, 8, 6, 6],
+      },
+    ],
+
     image: Acupuntura,
     additionalImages: [
       Acupuntura1,
@@ -621,40 +844,37 @@ const ProjectList: Project[] = [
       "El itinerario histórico que, atravesando la muralla medieval, unía el centro de la población con la ciudad islámica de Calatrava, quedó desfigurado por la implantación del campus universitario de UCLM. La ampliación del Campus al otro lado de la vía del ferrocarril en el Sector A-UNIV sobre ese itinerario, que es además una vía pecuaria (el camino de los Mártires), está poniendo en valor esa conexión, haciendo relevante su recuperación. <br> La acción pretende que, además de ser utilizado por estudiantes y ciudadanos (corredores y ciclistas) en su camino de salida de la ciudad, sirva de herramienta para facilitar la penetración de la naturaleza en la ciudad, renaturalizando zonas estratégicas entre las que se encuentra parte del aparcamiento del campus que interrumpe dicho itinerario que, además, no era accesible. <br> La acción es sencilla, pero estratégicamente muy relevante, ya que da continuidad al eje histórico de modo que permita volver a conectar el final de la calle Calatrava (centro urbano consolidado) con el conocido como Camino de los Mártires. Esto debe traducirse en una mejora de las condiciones de uso del itinerario por parte de peatones y ciclistas. <br> Esta acción reforzará la actuación de acceso al campus prevista por el Ayuntamiento en la vecina Calle López Bustos que incorpora la parcela cedida por la Consejería de Educación correspondiente al polígono de la Granja Agrícola, sede del antiguo instituto masculino.Se está colaborando con el Ayuntamiento para la coordinación de ambas actuaciones",
     properties1: [
       "Creación de un eje verde que conecte los dos núcleos universitarios (dentro y fuera del casco urbano)",
-      "“Grieta verde” en el asfalto que une el espacio urbano y el campo",
+      "Grieta verde que conecte los dos núcleos universitarios, dentro y fuera del núcleo urbano",
       "Objetivo: transformar zonas de paso en lugares de estancia y refugios de biodiversidad",
       "Longitud total del paseo: aprox. 120 metros",
       "Ancho medio del eje: 10 metros",
-    ],
-    properties2: [
       "Pavimento filtrante para mejorar la permeabilidad del suelo",
       "Zonas verdes de nueva plantación a ambos lados del paseo",
       "Eliminación del asfalto existente en el aparcamiento del campus",
       "Conversión del aparcamiento en zona verde de paso y estancia",
       "Integración paisajística con el entorno universitario",
     ],
-    properties3: [
+    properties2: [
       "Retirada de grava superficial y mezcla del suelo con tierra vegetal fertilizada",
       "Mejora de la estructura y fertilidad del terreno",
       "Recuperación de suelo vivo para permitir el desarrollo vegetal",
     ],
-    properties4: [
+    properties3: [
       "Arbustos para fomento de fauna local:-Lavandula latifolia -Myrtus communi -Cistus albidus -Juniperus communis",
       "Arbolado propuesto: -Fraxinus angustifolia “Raywood” (Espacio boscoso al final del paseo, en continuidad con el arbolado existente)",
       "Complementos vegetales: -Macizos floridos y fructíferos como reclamo para aves, mariposas y artrópodos -Refugios de biodiversidad integrados en el paisaje",
     ],
-    properties5: [
+    properties4: [
       "Señalización horizontal y vertical del itinerario",
       "Paneles informativos sobre: -Valor histórico del camino recuperado -Refugios de fauna y oasis de mariposas",
       "Códigos QR para ampliar la información de cada punto",
     ],
-    properties6: [
+    properties5: [
       "Proyecto complementario a la actuación municipal en Av. Camilo José Cela",
       "Objetivo común: conectar el campus universitario, las actuaciones de CRATER y el centro de Ciudad Real",
     ],
     features: [
       "Recuperación del itinerario histórico “Calatrava La Vieja”",
-      "Diseño del paseo y naturalización",
       "Regeneración del suelo",
       "Vegetación y biodiversidad",
       "Señalización y divulgación",
@@ -694,7 +914,7 @@ const ProjectList: Project[] = [
     budget:
       "Convocatoria de subvenciones para la renaturalización y resiliencia de ciudades 2022",
     description:
-      "La calidad de los espacios de estancia de estudiantes y otros ciudadanos en el Campus es muy deficitaria pese a la calidad de la sombra que les protege, por lo que esta actuación planteaba la demolición de bordillos y acerados y la plantación de una pequeña zona de pradera sostenible con el objetivo de mejorar el atractivo y la actividad del campus. <br> Además, este espacio conecta transversalmente la infraestructura verde del campus junto con el itinerario definido en la acción B7.1. Estos espacios estaban claramente infrautilizados. <br> Esta actuación pretendía iniciar la regeneración mediante la sustitución de algunas unidades e introducción de arbolado y matorral autóctono con menor demanda hídrica y de más lento crecimiento. Se trata de iniciar un proceso que a largo plazo garantice la sostenibilidad de la cubierta vegetal del Campus, y reduzca los problemas de alergias generados por las especies dominantes en la actualidad. ",
+      "La calidad de los espacios de estancia de las personas estudiantes y la ciudadanía en el Campus es muy deficitaria pese a la calidad de la sombra que les protege, por lo que se plantea la demolición de bordillos y acerados, así como la plantación de una pequeña zona de pradera sostenible que mejore el atractivo y laactividad del campus. Además, este espacio conectaría transversalmente la infraestructura verde del campus junto con el itinerario definido en la acción B7.1. y la renaturalización de las bolsas de aparcamiento de la acción B7.2. Estos espacios están infrautilizados en la actualidad. <br> En esta actuación se pretende iniciar la regeneración mediante la sustitución de algunas unidades e introducción de arbolado y matorral autóctono con menor demanda hídrica y de más lento crecimiento. Se trata de iniciar un proceso que, a largo plazo, garantizaría la sostenibilidad de la cubierta vegetal del Campus y reduciría los problemas de alergias generados por las especies dominantes en la actualidad.",
     properties1: [
       "Espacio del Campus Universitario, al norte de la Facultad de Químicas",
       "Demolición de acerados y bordillos que delimitan los parterres existentes",
@@ -807,26 +1027,20 @@ const ProjectList: Project[] = [
     description:
       "La Universidad de Castilla -La Mancha cuenta con un parque muy importante de edificios en sus campos de Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina. La eficiencia energética de estos edificios es muy importante en la reducción de consumos energéticos, siendo claves las medidas pasivas que mejoran el aislamiento térmico de los edificios. <br> En este sentido, las cubiertas verdes son una interesante alternativa que además permite sustituir cubiertas planas “muertas” en espacios vivos. Pero más allá de instalar cubiertas verdes en sus edificios, al contar la UCLM con centros de investigación y docencia en Arquitectura e ingeniería agronómica, dispone de los medios humanos necesarios para realizar una investigación que permita evaluar diversas soluciones de cubiertas para explorar aquellas especies y soluciones que mejor se adapten al clima y circunstancias de los edificios de Castilla – La Mancha, de manera que los resultados sean transferibles a otros edificios de la UCLM y otros propietarios. <br> Por este motivo, se planteaba esta acción para apoyar la docencia y prácticas de los alumnos de la Escuela de Ingenieros Agrónomos en la línea de cultivo experimental sobre las cubiertas de aproximadamente 300 m2 de la propia Escuela de Ingenieros Agrónomos.",
     properties1: [
-      "La Universidad de Castilla-La Mancha (UCLM) dispone de un amplio parque de edificios en: - Albacete, Ciudad Real, Cuenca y Toledo, además de las sedes de Almadén y Talavera de la Reina.",
-      "La eficiencia energética de sus edificios es clave en la reducción del consumo energético",
-      "Se priorizan medidas pasivas que mejoran el aislamiento térmico y reducen la demanda de climatización",
-    ],
-    properties2: [
       "Las cubiertas verdes se presentan como una alternativa innovadora para sustituir cubiertas planas “muertas” por espacios vivos",
       "Beneficios principales: -Mejora del aislamiento térmico -Retención de aguas pluviales -Aumento de la biodiversidad urbana -Reducción del efecto isla de calor",
     ],
-    properties3: [
+    properties2: [
       "Aprovechando los centros de investigación y docencia de la UCLM en Arquitectura e Ingeniería Agronómica",
       "Se plantea una investigación práctica para evaluar: -Diferentes tipos de cubiertas verdes -Especies vegetales más adaptadas al clima castellano-manchego -Soluciones constructivas sostenibles y replicables",
     ],
-    properties4: [
+    properties3: [
       "Acción piloto para apoyar la docencia y las prácticas del alumnado de la Escuela de Ingenieros Agrónomos",
       "Superficie de ensayo: aprox. 300 m² sobre las cubiertas del propio edificio de la Escuela",
       "Objetivo: generar conocimiento transferible a otros edificios de la UCLM y a futuros proyectos públicos o privados",
     ],
     features: [
-      "Contexto y alcance",
-      "Cubiertas verdes: sostenibilidad y transformación",
+      "Acción en la cubierta de Agrónomos",
       "Investigación y docencia aplicada",
       "Proyecto experimental",
     ],
