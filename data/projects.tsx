@@ -293,7 +293,7 @@ const ProjectList: Project[] = [
           "Quercus robur",
           "Tilia tomentosa",
         ],
-        unidades: [40, 30, 30, 25, 15, 15, 15, 15, 15, 10, 5, 5],
+        unidades: [40, 30, 30, 25, 20, 15, 15, 15, 15, 15, 10, 5, 5],
       },
     ],
     table2: [
