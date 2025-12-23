@@ -922,7 +922,7 @@ const ProjectList: Project[] = [
       "Función: espacio de descanso y esparcimiento para la comunidad universitaria y la ciudadanía",
     ],
     properties2: [
-      "Arbolado autóctono de baja demanda hídrica: -Olivos (Olea europaea) → 8-10 uds - Carrascas (Quercus ilex) → 8-10 uds -Alcornoques (Quercus suber) → 8-10 uds",
+      "Arbolado autóctono de baja demanda hídrica: -Olivos (Olea europaea) → Entre 8 y 10 uds - Carrascas (Quercus ilex) → Entre 8 y 10 uds -Alcornoques (Quercus suber) → Entre 8 y 10 uds",
       "Arbustos acompañantes: -Rosal paisajista (Rosa spp.) → 10 uds -Lavandula angustifolia → 10 uds -Myrtus communis → 10 uds",
       "Conjunto vegetal orientado a fomentar biodiversidad, sombra y confort ambiental",
     ],
